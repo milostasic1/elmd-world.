@@ -20,11 +20,17 @@
     header{border-bottom:1px solid rgba(216,235,255,.09);background:rgba(5,12,25,.40);backdrop-filter:blur(18px)}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:86px}
     .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.10em;font-size:17px;white-space:nowrap}
-    .brand-mark{display:grid;place-items:center;width:43px;height:43px;border:1px solid rgba(121,212,254,.4);border-radius:14px;background:linear-gradient(135deg,#183557,#102038);box-shadow:0 0 30px rgba(54,168,233,.12);font-size:23px}
+    .brand-mark{display:block;width:47px;height:47px;object-fit:cover;border:1px solid rgba(239,212,154,.48);border-radius:13px;box-shadow:0 0 25px rgba(232,176,91,.18)}
     .nav-links{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
     .nav-links a{font-size:14px;font-weight:700;color:#c7d4e6;transition:color .2s}
     .nav-links a:hover{color:#85def4}
-    .hero{padding:116px 0 105px;text-align:center;position:relative}
+    .hero{padding:53px 0 83px;text-align:center;position:relative}
+    .hero-cover{margin:24px auto 40px;max-width:1140px;overflow:hidden;border:1px solid rgba(232,199,136,.55);border-radius:23px;box-shadow:0 28px 85px rgba(0,0,0,.39),0 0 55px rgba(231,169,82,.10);background:#111a32}
+    .hero-cover img{display:block;width:100%;height:auto;aspect-ratio:1672/941;object-fit:contain}
+    .hero-cover figcaption{padding:9px 14px;color:#e2ccac;background:rgba(0,0,0,.42);font-size:12px;letter-spacing:.13em;text-transform:uppercase}
+    .about-aside{display:flex;flex-direction:column;align-items:center;gap:18px}
+    .about-emblem{display:block;width:min(100%,230px);height:auto;border-radius:22px;border:1px solid rgba(231,195,132,.36);box-shadow:0 16px 43px rgba(0,0,0,.31)}
+
     .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border:1px solid rgba(110,209,246,.27);border-radius:100px;color:#a5e4f8;background:rgba(53,136,194,.11);text-transform:uppercase;font-size:11px;letter-spacing:.20em;font-weight:800}
     h1{max-width:920px;margin:26px auto 16px;font-size:clamp(54px,9vw,112px);line-height:.96;letter-spacing:-.07em;font-weight:900}
     .accent{background:linear-gradient(110deg,#d4f3ff 14%,#78c9ff 49%,#82ecda 86%);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -59,8 +65,8 @@
     footer{border-top:1px solid var(--line);padding:31px 0 43px;color:#a3b5cc;font-size:13px}
     .footer-wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
     .footer-wrap a{color:#b9dff2;text-decoration:underline;text-underline-offset:3px}
-    @media (max-width:840px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.about{grid-template-columns:1fr}.hero{padding:95px 0 88px}}
-    @media (max-width:620px){.container{width:min(100% - 32px,1110px)}.nav{flex-direction:column;justify-content:center;padding:17px 0;gap:13px}.nav-links{gap:17px;justify-content:center}.nav-links a{font-size:12px}.hero{padding:77px 0 65px}h1{font-size:clamp(50px,13vw,74px)}.cards{grid-template-columns:1fr}.card{min-height:255px}.about{padding:26px;gap:22px}section{padding:34px 0 65px}.footer-wrap{justify-content:center;text-align:center}}
+    @media (max-width:840px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.about{grid-template-columns:1fr}.hero{padding:42px 0 66px}.hero-cover{margin:22px auto 33px}}
+    @media (max-width:620px){.container{width:min(100% - 32px,1110px)}.nav{flex-direction:column;justify-content:center;padding:17px 0;gap:13px}.nav-links{gap:17px;justify-content:center}.nav-links a{font-size:12px}.hero{padding:24px 0 65px}.hero-cover{border-radius:14px;margin:16px auto 28px}.hero-cover figcaption{font-size:10px}h1{font-size:clamp(50px,13vw,74px)}.cards{grid-template-columns:1fr}.card{min-height:255px}.about{padding:26px;gap:22px}section{padding:34px 0 65px}.footer-wrap{justify-content:center;text-align:center}}
     @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.card{transition:none}}
   </style>
 </head>
@@ -69,7 +75,7 @@
     <div class="stars" aria-hidden="true"></div>
     <header>
       <nav class="container nav" aria-label="Main navigation">
-        <a class="brand" href="#home" aria-label="ELMD WORLD home"><span class="brand-mark" aria-hidden="true">🐺</span> ELMD WORLD</a>
+        <a class="brand" href="#home" aria-label="ELMD WORLD home"><img class="brand-mark" src="4362ee75-d6f9-48d6-a68f-1b1163154def.png" alt="" width="47" height="47"> ELMD WORLD</a>
         <div class="nav-links"><a href="#projects">OUR WORLDS</a><a href="#about">OUR STORY</a><a href="#connect">CONNECT</a></div>
       </nav>
     </header>
@@ -77,6 +83,10 @@
       <div class="container hero">
         <div class="orbit" aria-hidden="true">✦</div>
         <span class="eyebrow">✧ A place for imagination ✧</span>
+        <figure class="hero-cover">
+          <img src="cfa8d62f-1c7b-4e05-979c-d8eb7b715c96.png" alt="ELMD WORLD magical universe: GiggleRhymes animals, guardian wolves, storybooks, creative fashion and CrazyAnimal friends" width="1672" height="941" fetchpriority="high">
+          <figcaption>Our projects, one magical universe</figcaption>
+        </figure>
         <h1>One world.<br><span class="accent">Endless stories.</span></h1>
         <p>Welcome to ELMD WORLD — a creative universe where music, art, storytelling and original ideas come together.</p>
         <div class="actions"><a class="btn btn-primary" href="#projects">Explore our worlds <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="#about">Discover our story</a></div>
@@ -99,7 +109,10 @@
       <section id="about">
         <div class="container about">
           <div><div class="section-label">The heart of ELMD</div><h2>Created with imagination. Built with heart.</h2><p>ELMD WORLD is a home for all our creative projects. We believe the most meaningful ideas begin with curiosity, kindness and the courage to create something new. Our world will keep growing — one song, image, story and dream at a time.</p></div>
-          <div class="quote">“Every great world begins with a little imagination.”<span>ELMD WORLD · Our creative journey</span></div>
+          <div class="about-aside">
+            <img class="about-emblem" src="4362ee75-d6f9-48d6-a68f-1b1163154def.png" alt="ELMD WORLD golden emblem featuring enchanted stories, animals, art and two guardian wolves" loading="lazy" width="1254" height="1254">
+            <div class="quote">“Every great world begins with a little imagination.”<span>ELMD WORLD · Our creative journey</span></div>
+          </div>
         </div>
       </section>
     </main>
