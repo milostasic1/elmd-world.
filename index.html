@@ -1,123 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#08101f" />
-  <meta name="description" content="ELMD WORLD brings together original children's songs, imaginative art, stories and creative projects in one world." />
-  <title>ELMD WORLD — A Universe of Creativity</title>
-  <style>
-    :root { color-scheme: dark; --bg: #07101f; --card: #111e32; --card2:#102039; --text:#f2f7ff; --muted:#adbbcf; --line:rgba(201,224,255,.16); --blue:#60b6f6; --teal:#67ecd9; --gold:#efd49a; }
-    *,*::before,*::after{box-sizing:border-box}
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#080d20" name="theme-color"/>
+<meta content="ELMD WORLD — a magical place for GiggleRhymes, MTASIC art, Stories &amp; Legends, ELMD SHOP, CrazyAnimal, interactive ABC learning and creative inspiration." name="description"/>
+<title>ELMD WORLD — A Universe of Creativity</title>
+<style>
+    :root{--bg:#080d20;--bg2:#10172c;--card:#111a34;--line:rgba(183,205,253,.14);--text:#eef3ff;--muted:#a8b5d0;--blue:#65b8ff;--aqua:#6ce6e4;--gold:#ffd88c;--focus:#ffd77d}
+    *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}
-    a{color:inherit;text-decoration:none}
-    a:focus-visible{outline:2px solid var(--teal);outline-offset:4px;border-radius:5px}
-    .site-wrap{position:relative;isolation:isolate;min-height:100vh;overflow:hidden}
-    .site-wrap::before{content:"";z-index:-1;position:absolute;inset:0 0 auto;height:850px;background:radial-gradient(ellipse at 20% 12%,rgba(42,129,192,.28),transparent 44%),radial-gradient(ellipse at 85% 26%,rgba(102,77,181,.19),transparent 43%),linear-gradient(180deg,#0b172e 0%,#07101f 85%)}
-    .stars{z-index:-1;pointer-events:none;position:absolute;inset:0 0 auto;height:850px;opacity:.7;background-image:radial-gradient(1px 1px at 10% 10%,#d7f4ff 95%,transparent),radial-gradient(2px 2px at 35% 18%,#d7f4ff 95%,transparent),radial-gradient(1px 1px at 70% 9%,#d7f4ff 95%,transparent),radial-gradient(1px 1px at 85% 40%,#d7f4ff 95%,transparent),radial-gradient(2px 2px at 25% 62%,#d7f4ff 95%,transparent),radial-gradient(1px 1px at 60% 63%,#d7f4ff 95%,transparent);background-size:270px 270px,350px 350px,420px 420px,310px 310px,460px 460px,390px 390px}
-    .container{width:min(1110px,calc(100% - 40px));margin:auto}
-    header{border-bottom:1px solid rgba(216,235,255,.09);background:rgba(5,12,25,.40);backdrop-filter:blur(18px)}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:86px}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.10em;font-size:17px;white-space:nowrap}
-    .brand-mark{display:block;width:47px;height:47px;object-fit:cover;border:1px solid rgba(239,212,154,.48);border-radius:13px;box-shadow:0 0 25px rgba(232,176,91,.18)}
-    .nav-links{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
-    .nav-links a{font-size:14px;font-weight:700;color:#c7d4e6;transition:color .2s}
-    .nav-links a:hover{color:#85def4}
-    .hero{padding:53px 0 83px;text-align:center;position:relative}
-    .hero-cover{margin:24px auto 40px;max-width:1140px;overflow:hidden;border:1px solid rgba(232,199,136,.55);border-radius:23px;box-shadow:0 28px 85px rgba(0,0,0,.39),0 0 55px rgba(231,169,82,.10);background:#111a32}
-    .hero-cover img{display:block;width:100%;height:auto;aspect-ratio:1672/941;object-fit:contain}
-    .hero-cover figcaption{padding:9px 14px;color:#e2ccac;background:rgba(0,0,0,.42);font-size:12px;letter-spacing:.13em;text-transform:uppercase}
-    .about-aside{display:flex;flex-direction:column;align-items:center;gap:18px}
-    .about-emblem{display:block;width:min(100%,230px);height:auto;border-radius:22px;border:1px solid rgba(231,195,132,.36);box-shadow:0 16px 43px rgba(0,0,0,.31)}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.55;z-index:-1;background-image:radial-gradient(2px 2px at 12% 17%,#fff 40%,transparent 60%),radial-gradient(1px 1px at 82% 12%,#fff 45%,transparent 55%),radial-gradient(1px 1px at 58% 29%,#fff 45%,transparent 55%),radial-gradient(2px 2px at 27% 73%,#fff 40%,transparent 60%),radial-gradient(1px 1px at 91% 83%,#fff 45%,transparent 55%),radial-gradient(1px 1px at 72% 67%,#fff 45%,transparent 55%);background-size:400px 410px}
+    body:after{content:"";position:fixed;inset:-30% -20%;z-index:-2;pointer-events:none;background:radial-gradient(ellipse at 80% 10%,rgba(33,94,158,.22),transparent 41%),radial-gradient(ellipse at 16% 70%,rgba(53,40,112,.22),transparent 42%)}
+    a{color:inherit}button{font:inherit}button:focus-visible,a:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+    .skip{position:absolute;top:-100px;left:20px;background:white;color:#080d20;padding:10px;z-index:1000}.skip:focus{top:12px}
+    .wrap{width:min(1160px,calc(100% - 44px));margin:auto}
+    header{position:sticky;top:0;z-index:50;background:rgba(8,13,32,.87);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:900;letter-spacing:.045em;font-size:19px;white-space:nowrap}
+    .logo-symbol{width:38px;height:38px;border:1px solid rgba(134,195,255,.7);border-radius:12px;display:grid;place-items:center;background:linear-gradient(145deg,#183b67,#10152f);box-shadow:0 0 25px rgba(39,166,251,.2);color:#a8dcff;font-size:22px}
+    .logo small{font-size:10px;display:block;color:var(--muted);letter-spacing:.3em;font-weight:700;line-height:1}
+    nav{display:flex;align-items:center;gap:26px}nav a{font-size:13px;font-weight:700;color:#b8c6e0;text-decoration:none;transition:.2s}nav a:hover{color:white}
+    .nav-right{display:flex;gap:10px;align-items:center}.lang{border:1px solid var(--line);padding:8px 12px;border-radius:20px;color:white;background:#14203a;cursor:pointer;font-size:12px;font-weight:800;white-space:nowrap}.menu{display:none;color:white;background:none;border:1px solid var(--line);padding:7px 11px;border-radius:10px;cursor:pointer}
+    .hero{position:relative;min-height:630px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:36px;padding:86px 0 94px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:11px;letter-spacing:.2em;font-weight:800;color:var(--aqua)}.eyebrow:before{content:"";width:21px;height:1px;background:var(--aqua)}
+    h1,h2,h3,p{margin-top:0}h1{font-weight:850;line-height:1.07;font-size:clamp(44px,5.5vw,76px);letter-spacing:-.06em;margin:22px 0 21px}.gradient{background:linear-gradient(100deg,#a2d4ff 5%,#70e1eb 55%,#e2c5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{max-width:510px;color:var(--muted);font-size:17px;line-height:1.85}.actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:32px}
+    .btn{appearance:none;border:1px solid rgba(171,205,255,.28);border-radius:12px;background:#192643;color:white;padding:14px 20px;font-weight:800;font-size:13px;display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s}.btn:hover{transform:translateY(-3px);background:#223658}.btn.primary{background:linear-gradient(120deg,#75c7fc,#70e4e0);color:#092340;border:0;box-shadow:0 12px 40px rgba(56,170,230,.22)}.btn.primary:hover{box-shadow:0 16px 50px rgba(56,170,230,.35)}.btn.ghost{background:transparent}
+    .hero-foot{margin-top:39px;display:flex;align-items:center;gap:16px;font-size:12px;color:#8fa7c8;letter-spacing:.045em}.stack{display:flex;padding-left:4px}.stack b{width:30px;height:30px;display:grid;place-items:center;border-radius:50%;margin-left:-5px;background:#172c4d;border:2px solid #0a1024;font-size:16px}
+    .portal-wrap{height:490px;position:relative;display:grid;place-items:center;isolation:isolate}.portal-glow{position:absolute;width:430px;height:430px;border-radius:50%;background:radial-gradient(circle,rgba(34,178,222,.16),rgba(89,73,204,.12) 43%,transparent 68%);filter:blur(18px)}
+    .orbit{position:absolute;border:1px solid rgba(119,179,244,.2);width:430px;height:430px;border-radius:50%;animation:spin 65s linear infinite}.orbit.two{height:358px;width:358px;border-style:dashed;border-color:rgba(180,136,232,.23);animation-duration:85s;animation-direction:reverse}.orbit:before{content:"";position:absolute;left:11%;top:12%;height:7px;width:7px;border-radius:50%;background:#91dbff;box-shadow:0 0 20px #81c7ff}
+    .portal{width:310px;height:310px;border-radius:50%;display:grid;place-items:center;position:relative;border:2px solid rgba(136,211,255,.58);background:radial-gradient(circle at 60% 40%,#1a4474 0%,#132e56 25%,#14183a 65%,#081228 100%);box-shadow:inset 0 0 65px rgba(58,188,249,.22),0 0 45px rgba(48,139,243,.24),0 0 0 12px rgba(113,179,230,.05)}
+    .portal:before{content:"";position:absolute;inset:15px;border:1px solid rgba(151,222,255,.16);border-radius:50%}.moon{position:absolute;top:39px;right:51px;width:75px;height:75px;border-radius:50%;background:linear-gradient(125deg,#f7f3e5,#8ddcf6);box-shadow:0 0 45px #a3dafe8f}.moon:after{content:"";position:absolute;width:68px;height:68px;border-radius:50%;background:#1a3d69;left:-20px;top:-9px}
+    .mountains{position:absolute;bottom:51px;width:270px;height:100px;clip-path:polygon(0 100%,0 85%,17% 37%,33% 78%,48% 16%,68% 85%,84% 36%,100% 88%,100% 100%);background:linear-gradient(#3677b5,#0a244b)}
+    .mountains.back{bottom:57px;height:75px;opacity:.52;transform:scaleX(-1);background:#4d6ba9}
+    .guardian{position:relative;top:37px;z-index:1;filter:drop-shadow(0 8px 15px #0008);display:flex;flex-direction:column;align-items:center}.guardian .wolf{font-size:94px;line-height:1;transform:scaleX(-1)}.guardian span{font-size:10px;letter-spacing:.22em;color:#d6e9ff;font-weight:900;margin-top:13px;text-shadow:0 2px 6px #001}
+    .orb-label{position:absolute;display:flex;align-items:center;gap:9px;padding:10px 13px;border:1px solid rgba(145,202,253,.2);background:rgba(18,28,55,.94);box-shadow:0 12px 24px #0004;border-radius:12px;font-size:12px;font-weight:800;white-space:nowrap}.orb-label .em{font-size:20px}.orb-a{top:32px;left:14px}.orb-b{top:111px;right:-13px}.orb-c{bottom:72px;left:-13px}.orb-d{bottom:23px;right:13px}
+    .section{padding:89px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:32px}.section-tag{font-size:11px;font-weight:900;letter-spacing:.2em;color:var(--aqua);margin-bottom:10px}.section h2{font-size:clamp(30px,3.5vw,45px);letter-spacing:-.04em;line-height:1.15;margin-bottom:12px}.section-head p,.section-intro{max-width:460px;color:var(--muted);font-size:15px}
+    .projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.project-card{min-height:294px;position:relative;overflow:hidden;border:1px solid var(--line);background:#111a35;border-radius:20px;padding:28px;display:flex;flex-direction:column;align-items:flex-start;transition:transform .2s,border-color .2s;cursor:pointer;text-align:left;color:white}.project-card:hover{transform:translateY(-5px);border-color:rgba(126,213,248,.6)}.project-card:before{content:"";position:absolute;top:-95px;right:-95px;width:300px;height:300px;border-radius:50%;background:var(--glow);filter:blur(6px);opacity:.7}.project-card .art{position:absolute;right:22px;top:60px;line-height:1;font-size:100px;filter:drop-shadow(0 15px 25px #0005);transform:rotate(-12deg);transition:transform .3s}.project-card:hover .art{transform:rotate(0) scale(1.09)}.project-card .tag{font-size:10px;color:var(--tag);letter-spacing:.13em;font-weight:900;background:rgba(4,11,29,.3);padding:6px 11px;border:1px solid rgba(255,255,255,.09);border-radius:20px}.project-card h3{font-size:29px;letter-spacing:-.03em;line-height:1.1;margin:66px 0 9px;position:relative}.project-card p{color:#b5c3dd;font-size:13px;line-height:1.7;max-width:300px;margin-bottom:18px;position:relative}.project-card .more{margin-top:auto;color:#e3f6ff;font-size:12px;font-weight:850;position:relative}.project-card .more span{padding-left:5px}
+    .project-card.kids{--glow:radial-gradient(circle,#4e95da77,transparent 66%);--tag:#8cdbfc}.project-card.store{--glow:radial-gradient(circle,#a958e06c,transparent 66%);--tag:#e8b3ff}.project-card.artcard{--glow:radial-gradient(circle,#e3aa6170,transparent 66%);--tag:#ffda97}.project-card.shop{--glow:radial-gradient(circle,#51c3ae65,transparent 66%);--tag:#9cebd6}
+    .playzone{background:linear-gradient(145deg,rgba(35,66,105,.45),rgba(23,23,58,.45));border:1px solid rgba(137,199,253,.22);border-radius:26px;display:grid;grid-template-columns:.82fr 1.18fr;gap:32px;padding:36px;align-items:center}.play-intro h2{font-size:37px}.play-intro p{color:#b8c5df;font-size:14px;max-width:335px}.mini-features{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}.mini-features span{color:#bde8f4;font-size:12px;background:#172f4d;border:1px solid #2b4b6d;padding:7px 11px;border-radius:20px}
+    .game{background:#f0f8ff;border-radius:18px;padding:24px;color:#16324f;min-height:376px;box-shadow:0 16px 55px #0004;display:flex;flex-direction:column}.game-top{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:900;color:#426586}.game-mark{background:#dcecfb;border-radius:18px;width:105px;height:105px;display:grid;place-items:center;margin:14px auto 10px;color:#1474ba;font-weight:950;font-size:75px;line-height:1}.game h3{text-align:center;color:#173855;font-size:15px;margin-bottom:18px}.answers{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.answer{display:grid;place-items:center;gap:6px;background:white;color:#193c59;border:2px solid #d6e5f5;border-radius:13px;padding:9px 4px;font-size:12px;font-weight:900;cursor:pointer;transition:.2s}.answer:hover:not(:disabled){transform:translateY(-3px);border-color:#6ab3ef}.answer:disabled{cursor:default}.answer .emoji{font-size:38px}.answer.correct{border-color:#2caa77;background:#dff8ec}.answer.wrong{border-color:#eb7c78;background:#fff0ec}.game-message{font-size:12px;text-align:center;color:#305d7b;min-height:26px;margin-top:14px;font-weight:800}.game-next{margin:5px auto 0;border:0;border-radius:9px;background:#1c7dc0;color:white;font-size:12px;font-weight:900;padding:9px 17px;cursor:pointer}.game-next[hidden]{display:none}.game-finish{text-align:center;display:grid;place-items:center;gap:8px;flex:1}.game-finish span{font-size:69px}.game-finish h3{font-size:25px;margin:0}.game-finish p{font-size:13px;margin:0}
+    .story{position:relative;overflow:hidden;border:1px solid rgba(174,161,253,.24);border-radius:25px;padding:60px;min-height:370px;background:radial-gradient(circle at 78% 36%,#3f467a96,transparent 41%),linear-gradient(125deg,#16172f,#1a2841);display:grid;grid-template-columns:1.25fr .75fr;gap:20px;align-items:center}.story:after{position:absolute;content:"✦  ✧   ✦    ✧    ✦";letter-spacing:35px;color:#ced2ff30;top:40px;right:0;transform:rotate(15deg)}.story h2{max-width:580px}.story p{max-width:490px;font-size:15px;color:#b8c2e3}.story-symbol{font-size:130px;text-align:center;filter:drop-shadow(0 0 44px #b4c5ff77);transform:rotate(-9deg)}.fortune{border-left:3px solid var(--gold);padding-left:18px;margin:25px 0 19px;color:#e4e8fc;font-style:italic;min-height:55px;font-size:15px;max-width:490px}
+    .mission{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.mission h2{max-width:460px}.mission p{color:var(--muted);font-size:15px}.emblem{min-height:285px;display:flex;align-items:center;justify-content:center;position:relative}.emblem:before{content:"";position:absolute;width:265px;height:265px;border:1px solid #5da7d84a;transform:rotate(45deg);border-radius:28px;background:linear-gradient(130deg,#1931516c,#11152b8c)}.emblem:after{content:"";position:absolute;width:215px;height:215px;border:1px solid #8dd5fa55;transform:rotate(45deg);border-radius:20px}.emblem .letters{position:relative;z-index:1;font-size:58px;font-weight:950;letter-spacing:-.08em;color:#a6dbff;text-shadow:0 0 28px #5bbdff66}.emblem .letters small{display:block;text-align:center;font-size:12px;letter-spacing:.32em;color:#dce9fd;font-weight:750}
+    footer{border-top:1px solid var(--line);padding:45px 0}.foot{display:flex;justify-content:space-between;align-items:start;gap:20px}.foot p{font-size:12px;color:#90a3bf;max-width:390px}.foot-links{display:flex;flex-wrap:wrap;gap:15px}.foot-links a{font-size:12px;color:#c3d4ee;text-decoration:none}.foot-links a:hover{text-decoration:underline}.copyright{padding-top:28px;font-size:11px;color:#6e81a0}
+    .modal-scrim{position:fixed;inset:0;z-index:100;background:rgba(4,8,24,.78);backdrop-filter:blur(8px);display:grid;place-items:center;padding:20px}.modal-scrim[hidden]{display:none}.modal{width:min(515px,100%);position:relative;background:linear-gradient(145deg,#192948,#10192f);border:1px solid #6999cd65;border-radius:22px;padding:35px;box-shadow:0 30px 85px #0009}.modal-icon{font-size:60px}.modal h2{font-size:31px;line-height:1.15;margin:8px 0}.modal p{font-size:15px;color:#b9cbe6}.close{position:absolute;right:14px;top:12px;border:1px solid #6c8ab255;border-radius:10px;background:#1a2f50;color:#fff;width:35px;height:35px;cursor:pointer}.modal-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:27px}.muted-note{font-size:11px;color:#8297b9;margin-top:18px}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @media (max-width:900px){.hero{grid-template-columns:1fr;gap:12px;padding:75px 0 45px}.hero p{max-width:680px}.portal-wrap{height:435px;max-width:520px;width:100%;margin:auto}.section{padding:65px 0}.playzone{grid-template-columns:1fr}.play-intro p{max-width:600px}.mission{gap:20px}.story{padding:40px}}
+    @media (max-width:650px){.wrap{width:min(100% - 30px,1160px)}.nav{min-height:69px}.logo{font-size:16px}.logo-symbol{width:34px;height:34px}.menu{display:inline-flex}nav{display:none;position:absolute;top:69px;left:0;right:0;padding:20px;background:#0f1930;border-bottom:1px solid var(--line);flex-direction:column;align-items:start;gap:18px}nav.show{display:flex}.hero{padding:64px 0 24px}.hero h1{font-size:48px}.hero p{font-size:15px}.actions{gap:8px}.btn{padding:12px 14px}.portal-wrap{height:370px}.portal-glow,.orbit{height:315px;width:315px}.orbit.two{height:260px;width:260px}.portal{height:235px;width:235px}.moon{width:57px;height:57px;right:34px;top:27px}.moon:after{width:52px;height:52px}.mountains{bottom:42px;width:215px;height:80px}.guardian .wolf{font-size:67px}.guardian span{font-size:8px}.orb-label{font-size:10px;padding:7px 9px;gap:5px}.orb-label .em{font-size:16px}.orb-a{top:29px;left:0}.orb-b{top:94px;right:-2px}.orb-c{bottom:48px;left:-2px}.orb-d{bottom:7px;right:9px}.section{padding:57px 0}.section-head{display:block}.projects{grid-template-columns:1fr;gap:14px}.project-card{min-height:270px;padding:24px}.project-card .art{font-size:85px}.project-card h3{font-size:26px}.playzone{padding:18px;gap:15px}.play-intro h2{font-size:32px}.game{padding:18px;min-height:343px}.answer .emoji{font-size:32px}.story{grid-template-columns:1fr;padding:25px;gap:0}.story-symbol{font-size:85px}.mission{grid-template-columns:1fr}.emblem{order:-1;min-height:300px}.foot{flex-direction:column}.modal{padding:26px}}
+    @media (prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.001ms!important;transition-duration:.001ms!important}}
+  
 
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border:1px solid rgba(110,209,246,.27);border-radius:100px;color:#a5e4f8;background:rgba(53,136,194,.11);text-transform:uppercase;font-size:11px;letter-spacing:.20em;font-weight:800}
-    h1{max-width:920px;margin:26px auto 16px;font-size:clamp(54px,9vw,112px);line-height:.96;letter-spacing:-.07em;font-weight:900}
-    .accent{background:linear-gradient(110deg,#d4f3ff 14%,#78c9ff 49%,#82ecda 86%);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .hero p{max-width:650px;margin:26px auto 34px;font-size:clamp(16px,2.1vw,19px);color:#bfd0e3}
-    .actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
-    .btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:11px 22px;border-radius:12px;font-size:14px;font-weight:800;transition:transform .2s,background .2s,border-color .2s}
-    .btn:hover{transform:translateY(-2px)}
-    .btn-primary{background:linear-gradient(110deg,#7ac9fb,#69e0db);color:#071829;box-shadow:0 12px 28px rgba(55,161,208,.15)}
-    .btn-secondary{border:1px solid rgba(199,227,248,.29);background:rgba(255,255,255,.045);color:#eef8ff}
-    .orbit{width:76px;height:76px;border-radius:50%;border:1px solid rgba(172,224,250,.28);display:grid;place-items:center;margin:0 auto 15px;box-shadow:0 0 0 14px rgba(64,155,209,.035),0 0 0 33px rgba(64,155,209,.025);font-size:35px;background:radial-gradient(circle at 30% 30%,#254f6c,#0e1b33)}
-    section{padding:48px 0 84px;scroll-margin-top:25px}
-    .section-label{color:#82dced;letter-spacing:.20em;font-weight:800;font-size:12px;text-transform:uppercase;margin-bottom:8px}
-    h2{font-size:clamp(31px,4.2vw,48px);letter-spacing:-.04em;line-height:1.13;margin:0 0 12px}
-    .section-intro{color:var(--muted);max-width:640px;margin:0 0 30px}
-    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-    .card{position:relative;overflow:hidden;display:flex;flex-direction:column;min-height:290px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,rgba(28,54,85,.84),rgba(13,25,45,.95));padding:27px;transition:transform .22s,border-color .22s,box-shadow .22s}
-    .card:hover{transform:translateY(-4px);border-color:rgba(137,218,255,.45);box-shadow:0 20px 38px rgba(0,0,0,.18)}
-    .card::after{content:"";position:absolute;top:-95px;right:-90px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(86,176,231,.13),transparent 70%);pointer-events:none}
-    .card.gold::after{background:radial-gradient(circle,rgba(240,194,115,.13),transparent 70%)}
-    .card.purple::after{background:radial-gradient(circle,rgba(157,126,251,.13),transparent 70%)}
-    .card-icon{width:52px;height:52px;border:1px solid rgba(195,229,249,.23);background:rgba(172,220,255,.09);display:grid;place-items:center;border-radius:15px;font-size:26px;margin-bottom:24px}
-    .card h3{font-size:22px;letter-spacing:-.03em;margin:0 0 9px;line-height:1.2}
-    .card p{color:#b5c4d8;font-size:14px;line-height:1.62;margin:0 0 21px}
-    .card-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:auto}
-    .card-links a{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:800;color:#8cddf1;text-decoration:underline;text-decoration-color:rgba(140,221,241,.35);text-underline-offset:4px}
-    .card-links a:hover{color:#c7f7ff}
-    .coming{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;letter-spacing:.04em;color:#e9d7a1;background:rgba(238,210,146,.10);border:1px solid rgba(238,210,146,.18);padding:5px 10px;border-radius:40px;margin-top:auto;width:max-content}
-    .about{position:relative;display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center;padding:44px;border-radius:27px;border:1px solid var(--line);background:linear-gradient(110deg,rgba(31,62,91,.58),rgba(14,28,50,.89))}
-    .about p{color:#bdcce1;margin:0}
-    .quote{padding:30px;border-left:2px solid #7bdedc;background:rgba(8,21,39,.48);border-radius:0 16px 16px 0;color:#e8f7ff;font-size:clamp(19px,2.6vw,28px);font-weight:750;line-height:1.35;letter-spacing:-.025em}
-    .quote span{display:block;color:#83cddd;font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-top:17px}
-    footer{border-top:1px solid var(--line);padding:31px 0 43px;color:#a3b5cc;font-size:13px}
-    .footer-wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    .footer-wrap a{color:#b9dff2;text-decoration:underline;text-underline-offset:3px}
-    @media (max-width:840px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.about{grid-template-columns:1fr}.hero{padding:42px 0 66px}.hero-cover{margin:22px auto 33px}}
-    @media (max-width:620px){.container{width:min(100% - 32px,1110px)}.nav{flex-direction:column;justify-content:center;padding:17px 0;gap:13px}.nav-links{gap:17px;justify-content:center}.nav-links a{font-size:12px}.hero{padding:24px 0 65px}.hero-cover{border-radius:14px;margin:16px auto 28px}.hero-cover figcaption{font-size:10px}h1{font-size:clamp(50px,13vw,74px)}.cards{grid-template-columns:1fr}.card{min-height:255px}.about{padding:26px;gap:22px}section{padding:34px 0 65px}.footer-wrap{justify-content:center;text-align:center}}
-    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.card{transition:none}}
-  </style>
+/* ELMD WORLD – unified magical / interactive edition */
+.logo-symbol{overflow:hidden;padding:0;background:#15213a;border:1px solid rgba(239,212,154,.5)}
+.logo-symbol img{display:block;width:100%;height:100%;object-fit:cover}
+.wide-cover{margin:30px auto 0;overflow:hidden;border:1px solid rgba(240,203,143,.48);border-radius:24px;box-shadow:0 28px 70px #0008,0 0 55px #c4964222;background:#0c172b}
+.wide-cover img{display:block;width:100%;height:auto;aspect-ratio:1672/941;object-fit:contain}
+.wide-cover figcaption{background:rgba(2,10,29,.8);padding:10px 16px;color:#e8d2a8;text-align:center;text-transform:uppercase;letter-spacing:.19em;font-size:10px;font-weight:850}
+.hero{min-height:530px;padding:48px 0 58px}
+.portal-wrap{height:440px}.portal-glow{filter:blur(15px)}
+.emblem-orb{position:relative;z-index:2;width:min(68%,310px);height:auto;aspect-ratio:1;object-fit:cover;border-radius:50%;border:2px solid #e5c18a80;box-shadow:0 0 0 9px #98c8ff0d,0 16px 55px #0009,0 0 45px #bbd5ff22}
+.orb-label{z-index:3}
+.projects{grid-template-columns:repeat(3,minmax(0,1fr))}
+.project-card{min-height:310px;padding:24px}
+.project-card h3{font-size:26px}
+.project-card .art{font-size:79px;right:18px;top:61px}
+.project-card.storycard{--glow:radial-gradient(circle,#cd9b576b,transparent 66%);--tag:#ffdfaa}
+.project-card.pinterestcard{--glow:radial-gradient(circle,#6775d67b,transparent 66%);--tag:#ccd0ff}
+.mission-art{width:min(100%,365px);margin:auto;position:relative}
+.mission-art img{display:block;width:100%;height:auto;border-radius:24px;border:1px solid #e6c48a66;box-shadow:0 28px 75px #0008}
+.story-symbol{font-size:95px}
+.soon-note{font-size:13px;color:#f4dba9;background:#56432366;border:1px solid #ae875b88;border-radius:12px;padding:12px 14px}
+@media(max-width:1100px){.projects{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){.hero{padding:38px 0 34px;min-height:0}.wide-cover{margin:20px auto 0}.portal-wrap{height:410px}}
+@media(max-width:650px){.wide-cover{border-radius:15px;margin-top:17px}.wide-cover figcaption{font-size:9px;letter-spacing:.1em}.hero{padding:35px 0 15px}.projects{grid-template-columns:1fr}.project-card{min-height:270px}.emblem-orb{width:235px}.story-symbol{font-size:76px}.mission-art{width:min(80%,295px)}}
+</style>
 </head>
 <body>
-  <div class="site-wrap">
-    <div class="stars" aria-hidden="true"></div>
-    <header>
-      <nav class="container nav" aria-label="Main navigation">
-        <a class="brand" href="#home" aria-label="ELMD WORLD home"><img class="brand-mark" src="4362ee75-d6f9-48d6-a68f-1b1163154def.png" alt="" width="47" height="47"> ELMD WORLD</a>
-        <div class="nav-links"><a href="#projects">OUR WORLDS</a><a href="#about">OUR STORY</a><a href="#connect">CONNECT</a></div>
-      </nav>
-    </header>
-    <main id="home">
-      <div class="container hero">
-        <div class="orbit" aria-hidden="true">✦</div>
-        <span class="eyebrow">✧ A place for imagination ✧</span>
-        <figure class="hero-cover">
-          <img src="cfa8d62f-1c7b-4e05-979c-d8eb7b715c96.png" alt="ELMD WORLD magical universe: GiggleRhymes animals, guardian wolves, storybooks, creative fashion and CrazyAnimal friends" width="1672" height="941" fetchpriority="high">
-          <figcaption>Our projects, one magical universe</figcaption>
-        </figure>
-        <h1>One world.<br><span class="accent">Endless stories.</span></h1>
-        <p>Welcome to ELMD WORLD — a creative universe where music, art, storytelling and original ideas come together.</p>
-        <div class="actions"><a class="btn btn-primary" href="#projects">Explore our worlds <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="#about">Discover our story</a></div>
-      </div>
-      <section id="projects">
-        <div class="container">
-          <div class="section-label">Discover the universe</div>
-          <h2>Explore our creative worlds</h2>
-          <p class="section-intro">Different projects, one shared spirit: making something original, joyful and meaningful.</p>
-          <div class="cards">
-            <article class="card"><div class="card-icon" aria-hidden="true">🎵</div><h3>GiggleRhymes</h3><p>Original songs, colorful characters and playful adventures for little learners and big imaginations.</p><div class="card-links"><a href="https://www.youtube.com/channel/UCWxPW0jCv-XvurY1vjikR3Q" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></div></article>
-            <article class="card purple"><div class="card-icon" aria-hidden="true">🐺</div><h3>MTASIC Art Collection</h3><p>Fantasy, magical guardians and unexpected worlds — an evolving collection of original visual ideas.</p><div class="card-links"><a href="https://www.deviantart.com/mtasic" target="_blank" rel="noopener noreferrer">Explore the gallery ↗</a></div></article>
-            <article class="card gold"><div class="card-icon" aria-hidden="true">📖</div><h3>Stories &amp; Legends</h3><p>Tales of courage, love, memory and magic. Follow the stories behind the worlds we create.</p><span class="coming">✦ Story link coming soon</span></article>
-            <article class="card"><div class="card-icon" aria-hidden="true">🛍️</div><h3>ELMD SHOP</h3><p>Our creative shop identity — a home for future collections, original designs and discoveries.</p><div class="card-links"><a href="https://www.facebook.com/ELMDSHOP/" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a href="https://www.instagram.com/elmdshop/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></article>
-            <article class="card gold"><div class="card-icon" aria-hidden="true">🐾</div><h3>CrazyAnimal</h3><p>A playful independent brand with bold ideas and original designs. Something exciting is taking shape.</p><span class="coming">✦ In development</span></article>
-            <article class="card purple"><div class="card-icon" aria-hidden="true">✨</div><h3>Ideas &amp; Inspiration</h3><p>A growing collection of visual inspiration, creative experiments and new adventures.</p><div class="card-links"><a href="https://www.pinterest.com/milos986/" target="_blank" rel="noopener noreferrer">Visit Pinterest ↗</a></div></article>
-          </div>
-        </div>
-      </section>
-      <section id="about">
-        <div class="container about">
-          <div><div class="section-label">The heart of ELMD</div><h2>Created with imagination. Built with heart.</h2><p>ELMD WORLD is a home for all our creative projects. We believe the most meaningful ideas begin with curiosity, kindness and the courage to create something new. Our world will keep growing — one song, image, story and dream at a time.</p></div>
-          <div class="about-aside">
-            <img class="about-emblem" src="4362ee75-d6f9-48d6-a68f-1b1163154def.png" alt="ELMD WORLD golden emblem featuring enchanted stories, animals, art and two guardian wolves" loading="lazy" width="1254" height="1254">
-            <div class="quote">“Every great world begins with a little imagination.”<span>ELMD WORLD · Our creative journey</span></div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer id="connect"><div class="container footer-wrap"><span>© <span id="year">2026</span> ELMD WORLD · Made with imagination and care.</span><span><a href="https://www.youtube.com/channel/UCWxPW0jCv-XvurY1vjikR3Q" target="_blank" rel="noopener noreferrer">YouTube</a> &nbsp;·&nbsp; <a href="https://www.deviantart.com/mtasic" target="_blank" rel="noopener noreferrer">DeviantArt</a> &nbsp;·&nbsp; <a href="https://www.facebook.com/ELMDSHOP/" target="_blank" rel="noopener noreferrer">Facebook</a></span></div></footer>
-  </div>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<a class="skip" href="#main">Skip to main content</a>
+<header>
+<div class="nav wrap">
+<a aria-label="ELMD World home" class="logo" href="#top"><span class="logo-symbol"><img alt="" height="38" src="4362ee75-d6f9-48d6-a68f-1b1163154def.png" width="38"/></span><span>ELMD <span style="color:#8dd4ff">WORLD</span><small>IMAGINATION UNIVERSE</small></span></a>
+<nav aria-label="Main navigation" id="nav">
+<a data-en="Our worlds" data-sr="Naši svetovi" href="#worlds">Our worlds</a>
+<a data-en="Play &amp; learn" data-sr="Igra i učenje" href="#play">Play &amp; learn</a>
+<a data-en="Guardians" data-sr="Čuvari" href="#guardians">Guardians</a>
+<a data-en="Our mission" data-sr="Naša misija" href="#mission">Our mission</a>
+</nav>
+<div class="nav-right"><button aria-label="Change site language" class="lang" id="lang" title="Change language">SR / EN</button><button aria-expanded="false" aria-label="Open navigation" class="menu" id="menu">☰</button></div>
+</div>
+</header>
+<main id="main">
+<figure class="wide-cover wrap">
+<img alt="ELMD WORLD fantasy universe featuring colorful learning animals, moonlight guardian wolves, books, original art and creative products" fetchpriority="high" height="941" src="cfa8d62f-1c7b-4e05-979c-d8eb7b715c96.png" width="1672"/>
+<figcaption data-en="Our projects, one magical universe" data-sr="Naši projekti, jedan čarobni univerzum">Our projects, one magical universe</figcaption>
+</figure><section class="hero wrap" id="top">
+<div>
+<div class="eyebrow" data-en="WELCOME TO ELMD WORLD" data-sr="DOBRO DOŠLI U ELMD WORLD">WELCOME TO ELMD WORLD</div>
+<h1><span data-en="One world." data-sr="Jedan svet.">One world.</span><br/><span class="gradient" data-en="Endless imagination." data-sr="Beskrajna mašta.">Endless imagination.</span></h1>
+<p data-en="A universe of original stories, colorful learning, creative art and ambitious ideas. Different dreams, connected by one heart." data-sr="Univerzum originalnih priča, šarenog učenja, kreativne umetnosti i velikih ideja. Različiti snovi, povezani jednim srcem.">A universe of original stories, colorful learning, creative art and ambitious ideas. Different dreams, connected by one heart.</p>
+<div class="actions"><a class="btn primary" href="#worlds"><span data-en="Explore our worlds" data-sr="Istraži naše svetove">Explore our worlds</span> ↗</a><a class="btn ghost" href="#guardians"><span data-en="Meet our guardian" data-sr="Upoznaj našeg čuvara">Meet our guardian</span> 🐺</a></div>
+<div class="hero-foot"><span aria-hidden="true" class="stack"><b>🐰</b><b>🐘</b><b>🐧</b><b>🦁</b></span><span data-en="Created with imagination, built with care." data-sr="Stvoreno maštom, građeno s ljubavlju.">Created with imagination, built with care.</span></div>
+</div>
+<div aria-label="ELMD WORLD magical emblem surrounded by the worlds we create" class="portal-wrap" role="img">
+<div class="portal-glow"></div><div class="orbit"></div><div class="orbit two"></div>
+<img alt="" class="emblem-orb" height="1254" loading="lazy" src="4362ee75-d6f9-48d6-a68f-1b1163154def.png" width="1254"/>
+<div class="orb-label orb-a"><span class="em">🌈</span> GiggleRhymes</div>
+<div class="orb-label orb-b"><span class="em">👕</span> CrazyAnimal</div>
+<div class="orb-label orb-c"><span class="em">🐺</span> MTASIC Art</div>
+<div class="orb-label orb-d"><span class="em">✨</span> ELMD Shop</div>
+</div>
+</section>
+<section class="section wrap" id="worlds">
+<div class="section-head"><div><div class="section-tag" data-en="DISCOVER THE UNIVERSE" data-sr="OTKRIJ UNIVERZUM">DISCOVER THE UNIVERSE</div><h2 data-en="Discover our creative worlds" data-sr="Otkrij naše kreativne svetove">Discover our creative worlds</h2></div><p data-en="Every project has its own personality. Choose a world to learn more and visit its official home." data-sr="Svaki projekat ima svoj karakter. Izaberi svet da saznaš više i posetiš njegovu zvaničnu stranicu.">Every project has its own personality. Choose a world to learn more and visit its official home.</p></div>
+<div class="projects">
+<button aria-label="Explore GiggleRhymes" class="project-card kids" data-project="giggle"><span class="tag" data-en="KIDS • MUSIC • LEARNING" data-sr="DECA • MUZIKA • UČENJE">KIDS • MUSIC • LEARNING</span><span aria-hidden="true" class="art">🌈</span><h3>GiggleRhymes</h3><p data-en="Original animated songs, friendly characters and happy discoveries for little learners." data-sr="Originalne animirane pesmice, veseli junaci i radosna otkrića za najmlađe.">Original animated songs, friendly characters and happy discoveries for little learners.</p><span class="more"><span data-en="Enter this world" data-sr="Uđi u ovaj svet">Enter this world</span> <span>↗</span></span></button>
+<button aria-label="Explore CrazyAnimal" class="project-card store" data-project="crazy"><span class="tag" data-en="CREATIVE DESIGN • APPAREL" data-sr="KREATIVNI DIZAJN • ODEĆA">CREATIVE DESIGN • APPAREL</span><span aria-hidden="true" class="art">🦊</span><h3>CrazyAnimal</h3><p data-en="Bold animal-inspired ideas and playful designs. A brand for original characters and imagination." data-sr="Smešne i smele ideje inspirisane životinjama. Brend za originalne likove i maštu.">Bold animal-inspired ideas and playful designs. A brand for original characters and imagination.</p><span class="more"><span data-en="Enter this world" data-sr="Uđi u ovaj svet">Enter this world</span> <span>↗</span></span></button>
+<button aria-label="Explore MTASIC Art Collection" class="project-card artcard" data-project="art"><span class="tag" data-en="FANTASY • ART • STORIES" data-sr="FANTAZIJA • UMETNOST • PRIČE">FANTASY • ART • STORIES</span><span aria-hidden="true" class="art">🐺</span><h3>MTASIC Art Collection</h3><p data-en="Magical adventures, mysterious worlds and guardians who protect the light of imagination." data-sr="Čarobne avanture, tajanstveni svetovi i čuvari koji štite svetlost mašte.">Magical adventures, mysterious worlds and guardians who protect the light of imagination.</p><span class="more"><span data-en="Enter this world" data-sr="Uđi u ovaj svet">Enter this world</span> <span>↗</span></span></button><button aria-label="Explore Stories and Legends" class="project-card storycard" data-project="stories">
+<span class="tag" data-en="STORIES • MAGIC • MEMORY" data-sr="PRIČE • MAGIJA • SEĆANJA">STORIES • MAGIC • MEMORY</span>
+<span aria-hidden="true" class="art">📖</span>
+<h3>Stories &amp; Legends</h3>
+<p data-en="Original stories of courage, love and magical guardians. Our Note.com chapters will join the universe here." data-sr="Originalne priče o hrabrosti, ljubavi i čarobnim čuvarima. Ovde ćemo povezati naša poglavlja sa Note.com.">Original stories of courage, love and magical guardians. Our Note.com chapters will join the universe here.</p>
+<span class="more"><span data-en="Discover the stories" data-sr="Otkrij priče">Discover the stories</span> <span>↗</span></span>
+</button>
+<button aria-label="Explore ELMD Shop" class="project-card shop" data-project="shop"><span class="tag" data-en="SHOP • COMMUNITY • CREATIONS" data-sr="PRODAVNICA • ZAJEDNICA • IDEJE">SHOP • COMMUNITY • CREATIONS</span><span aria-hidden="true" class="art">🛍️</span><h3>ELMD Shop</h3><p data-en="A place for the products, inspiration and new ideas emerging from the ELMD universe." data-sr="Mesto za proizvode, inspiraciju i nove ideje koje nastaju u ELMD univerzumu.">A place for the products, inspiration and new ideas emerging from the ELMD universe.</p><span class="more"><span data-en="Enter this world" data-sr="Uđi u ovaj svet">Enter this world</span> <span>↗</span></span></button>
+<button aria-label="Explore Ideas and Inspiration" class="project-card pinterestcard" data-project="ideas">
+<span class="tag" data-en="IDEAS • ART • INSPIRATION" data-sr="IDEJE • UMETNOST • INSPIRACIJA">IDEAS • ART • INSPIRATION</span>
+<span aria-hidden="true" class="art">✨</span>
+<h3 data-en="Ideas &amp; Inspiration" data-sr="Ideje i inspiracija">Ideas &amp; Inspiration</h3>
+<p data-en="A growing collection of visual discoveries and imaginative experiments from our world." data-sr="Kolekcija vizuelnih otkrića i maštovitih eksperimenata iz našeg sveta.">A growing collection of visual discoveries and imaginative experiments from our world.</p>
+<span class="more"><span data-en="See our inspiration" data-sr="Pogledaj inspiraciju">See our inspiration</span> <span>↗</span></span>
+</button></div>
+</section>
+<section class="section wrap" id="play">
+<div class="playzone">
+<div class="play-intro"><div class="section-tag" data-en="MINI EXPERIENCE" data-sr="MALA AVANTURA">MINI EXPERIENCE</div><h2><span data-en="Learning should" data-sr="Učenje treba da">Learning should</span><br/><span class="gradient" data-en="feel like magic." data-sr="bude čarolija.">feel like magic.</span></h2><p data-en="Meet a tiny preview of the interactive GiggleRhymes learning world. Pick the right picture for each letter and collect stars!" data-sr="Isprobaj malu najavu GiggleRhymes sveta učenja. Izaberi pravu sliku za svako slovo i osvoji zvezdice!">Meet a tiny preview of the interactive GiggleRhymes learning world. Pick the right picture for each letter and collect stars!</p><div class="mini-features"><span>🌈 ABC</span><span>⭐ <span data-en="Play &amp; learn" data-sr="Igra i učenje">Play &amp; learn</span></span><span>🐘 GiggleRhymes</span></div></div>
+<div aria-live="polite" class="game" id="game"><div class="game-top"><span>🌈 GiggleRhymes ABC</span><span id="game-score">⭐ 0 / 4</span></div><div id="game-content"><div class="game-mark" id="game-letter">A</div><h3 id="game-question">Which picture begins with A?</h3><div class="answers" id="answers"></div><div aria-live="polite" class="game-message" id="game-message"></div><div style="text-align:center"><button class="game-next" hidden="" id="game-next">Next letter →</button></div></div></div>
+</div>
+</section>
+<section class="section wrap" id="guardians">
+<div class="story"><div><div class="section-tag" data-en="MOONLIGHT GUARDIANS" data-sr="ČUVARI MESEČINE" style="color:#ffd88c">MOONLIGHT GUARDIANS</div><h2 data-en="Every world needs a guardian." data-sr="Svakom svetu treba čuvar.">Every world needs a guardian.</h2><p data-en="Our symbolic wolves Dragiša and Emilija watch over a universe of fantasy, friendship, courage and stories yet to be told. Reveal a message from the guardians." data-sr="Naši simbolični vukovi Dragiša i Emilija čuvaju svet fantazije, prijateljstva, hrabrosti i priča koje tek čekaju da budu ispričane. Otkrij poruku čuvara.">Our symbolic wolves Dragiša and Emilija watch over a universe of fantasy, friendship, courage and stories yet to be told. Reveal a message from the guardians.</p><div aria-live="polite" class="fortune" data-en="A new message is waiting behind the stars..." data-sr="Nova poruka čeka iza zvezda..." id="fortune">A new message is waiting behind the stars...</div><button class="btn primary" id="reveal"><span data-en="Reveal a message" data-sr="Otkrij poruku">Reveal a message</span> ✨</button></div><div aria-hidden="true" class="story-symbol">🐺🌙🐺</div></div>
+</section>
+<section class="section wrap" id="mission">
+<div class="mission"><div class="mission-art">
+<img alt="ELMD WORLD golden emblem with animals, wolves, creative products and books" height="1254" loading="lazy" src="4362ee75-d6f9-48d6-a68f-1b1163154def.png" width="1254"/>
+</div><div><div class="section-tag" data-en="WHY WE CREATE" data-sr="ZAŠTO STVARAMO">WHY WE CREATE</div><h2 data-en="Built with heart. Made to grow." data-sr="Građeno srcem. Stvoreno da raste.">Built with heart. Made to grow.</h2><p data-en="ELMD WORLD brings together different ideas under one creative home. We believe in originality, kindness, curiosity and making something meaningful that can grow with time." data-sr="ELMD WORLD povezuje različite ideje pod jednim kreativnim krovom. Verujemo u originalnost, dobrotu, radoznalost i stvaranje nečeg vrednog što može da raste kroz vreme.">ELMD WORLD brings together different ideas under one creative home. We believe in originality, kindness, curiosity and making something meaningful that can grow with time.</p><p data-en="This is our first interactive chapter. More games, stories and discoveries are ahead." data-sr="Ovo je naše prvo interaktivno poglavlje. Pred nama su nove igre, priče i otkrića.">This is our first interactive chapter. More games, stories and discoveries are ahead.</p><a class="btn ghost" href="#worlds"><span data-en="Discover the projects" data-sr="Otkrij projekte">Discover the projects</span> ↗</a></div></div>
+</section>
+</main>
+<footer><div class="wrap"><div class="foot"><div><a class="logo" href="#top"><span class="logo-symbol">✧</span><span>ELMD WORLD</span></a><p data-en="One creative home for learning, art, stories and new beginnings." data-sr="Jedan kreativni dom za učenje, umetnost, priče i nove početke.">One creative home for learning, art, stories and new beginnings.</p></div><div class="foot-links"><a href="https://www.youtube.com/channel/UCWxPW0jCv-XvurY1vjikR3Q" rel="noopener noreferrer" target="_blank">YouTube</a><a href="https://www.deviantart.com/mtasic" rel="noopener noreferrer" target="_blank">DeviantArt</a><a href="https://www.facebook.com/ELMDSHOP/" rel="noopener noreferrer" target="_blank">Facebook</a><a href="https://www.instagram.com/elmdshop/" rel="noopener noreferrer" target="_blank">Instagram</a><a href="https://www.pinterest.com/milos986/" rel="noopener noreferrer" target="_blank">Pinterest</a></div></div><div class="copyright">© <span id="year"></span> ELMD WORLD · <span data-en="Created with heart and imagination." data-sr="Stvoreno srcem i maštom.">Created with heart and imagination.</span></div></div></footer>
+<div class="modal-scrim" hidden="" id="modal-scrim" role="presentation"><div aria-labelledby="modal-title" aria-modal="true" class="modal" role="dialog"><button aria-label="Close details" class="close" id="close">✕</button><div class="modal-icon" id="modal-icon"></div><div class="section-tag" id="modal-kicker"></div><h2 id="modal-title"></h2><p id="modal-description"></p><div class="modal-links" id="modal-links"></div><div class="muted-note" data-en="Links open the project's existing page in a new tab." data-sr="Linkovi otvaraju postojeću stranicu projekta u novoj kartici.">Links open the project's existing page in a new tab.</div></div></div>
+<script>
+    'use strict';
+    const content = {
+      giggle:{icon:'🌈',kicker:['KIDS • MUSIC • LEARNING','DECA • MUZIKA • UČENJE'],title:'GiggleRhymes',desc:['Original English-language animated songs and learning adventures with a rabbit, an elephant, a penguin and a lion.','Originalne animirane pesmice i avanture učenja na engleskom sa zecom, slonom, pingvinom i lavom.'],links:[['Watch on YouTube','Pogledaj na YouTube-u','https://www.youtube.com/channel/UCWxPW0jCv-XvurY1vjikR3Q']]},
+      crazy:{icon:'🐾',kicker:['DESIGN • APPAREL','DIZAJN • ODEĆA'],title:'CrazyAnimal',desc:['Original playful animal designs and creative products. This independent store project is still being developed.','Originalni zabavni dizajni sa životinjama i kreativni proizvodi. Ova zasebna prodavnica je još u razvoju.'],links:[['Visit project domain','Poseti domen projekta','https://crazyanimal.store/']]},
+      art:{icon:'🐺',kicker:['FANTASY • ART • STORIES','FANTAZIJA • UMETNOST • PRIČE'],title:'MTASIC Art Collection',desc:['The world of Moonlight Guardians, magical images and fantasy art, with the guardian wolves Dragiša and Emilija.','Svet Čuvara mesečine, magičnih slika i fantastične umetnosti, uz vukove čuvare Dragišu i Emiliju.'],links:[['View art on DeviantArt','Pogledaj radove na DeviantArt-u','https://www.deviantart.com/mtasic'],['Discover Pinterest','Pogledaj Pinterest','https://www.pinterest.com/milos986/']]},
+      stories:{icon:'📖',kicker:['STORIES • MAGIC','PRIČE • MAGIJA'],title:'Stories & Legends',desc:['Our original tales of love, protection and imagination. We will add the direct Note.com story links when their URLs are available.','Naše originalne priče o ljubavi, zaštiti i mašti. Dodaćemo direktne Note.com linkove kada budemo imali njihove adrese.'],links:[]},
+      shop:{icon:'🛍️',kicker:['SHOP • COMMUNITY','PRODAVNICA • ZAJEDNICA'],title:'ELMD SHOP',desc:['The social home of our creative merchandise ideas and new projects.','Mesto za naše kreativne proizvode, inspiraciju i nove projekte.'],links:[['Visit Facebook page','Poseti Facebook stranicu','https://www.facebook.com/ELMDSHOP/'],['Visit Instagram','Poseti Instagram','https://www.instagram.com/elmdshop/']]},
+      ideas:{icon:'✨',kicker:['INSPIRATION • CREATIONS','INSPIRACIJA • IDEJE'],title:'Ideas & Inspiration',desc:['Explore our visual inspiration and experiments collected on Pinterest.','Pogledaj vizuelnu inspiraciju i eksperimente koje delimo na Pinterestu.'],links:[['Open Pinterest','Otvori Pinterest','https://www.pinterest.com/milos986/']]}
+    };
+    const questions=[{letter:'A',choices:[['🍎','Apple'],['🐱','Cat'],['🦆','Duck']],correct:'Apple'},{letter:'B',choices:[['🦁','Lion'],['⚽','Ball'],['🍎','Apple']],correct:'Ball'},{letter:'C',choices:[['🦆','Duck'],['🐱','Cat'],['⚽','Ball']],correct:'Cat'},{letter:'D',choices:[['🍎','Apple'],['🦆','Duck'],['🐱','Cat']],correct:'Duck'}];
+    const messages=[['Even the smallest light can guide someone home.','I najmanje svetlo može nekome pokazati put kući.'],['A brave heart can turn an ordinary moment into magic.','Hrabro srce može pretvoriti običan trenutak u čaroliju.'],['Every dream begins with one step into the unknown.','Svaki san počinje jednim korakom u nepoznato.'],['The strongest guardians protect what cannot be seen: hope.','Najhrabriji čuvari štite ono što se ne vidi: nadu.']];
+    let lang='en',idx=0,score=0,selected=null,lastMessage=-1,previousFocus=null;
+    const $=id=>document.getElementById(id);
+    const tx=(en,sr)=>lang==='en'?en:sr;
+    function applyLang(){document.documentElement.lang=lang;document.querySelectorAll('[data-en][data-sr]').forEach(el=>el.textContent=el.dataset[lang]);$('lang').textContent=lang==='en'?'SR / EN':'EN / SR';renderGame(); if(lastMessage>=0)$('fortune').textContent=messages[lastMessage][lang==='en'?0:1];}
+    $('lang').addEventListener('click',()=>{lang=lang==='en'?'sr':'en';applyLang()});
+    $('menu').addEventListener('click',()=>{const shown=$('nav').classList.toggle('show');$('menu').setAttribute('aria-expanded',String(shown))});
+    document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{$('nav').classList.remove('show');$('menu').setAttribute('aria-expanded','false')}));
+    function openProject(id){const p=content[id];if(!p)return;previousFocus=document.activeElement;$('modal-icon').textContent=p.icon;$('modal-kicker').textContent=p.kicker[lang==='en'?0:1];$('modal-title').textContent=p.title;$('modal-description').textContent=p.desc[lang==='en'?0:1];$('modal-links').replaceChildren();if(p.links.length===0){const notice=document.createElement('span');notice.className='soon-note';notice.textContent=tx('Direct story links coming soon.','Direktni linkovi ka pričama uskoro.');$('modal-links').appendChild(notice)}p.links.forEach(([en,sr,url])=>{const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.className='btn primary';a.textContent=tx(en,sr)+' ↗';$('modal-links').appendChild(a)});$('modal-scrim').hidden=false;document.body.style.overflow='hidden';$('close').focus()}
+    function closeProject(){$('modal-scrim').hidden=true;document.body.style.overflow='';if(previousFocus)previousFocus.focus()}
+    document.querySelectorAll('[data-project]').forEach(b=>b.addEventListener('click',()=>openProject(b.dataset.project)));
+    $('close').addEventListener('click',closeProject);
+    $('modal-scrim').addEventListener('click',e=>{if(e.target===$('modal-scrim'))closeProject()});
+    document.addEventListener('keydown',e=>{if($('modal-scrim').hidden)return;if(e.key==='Escape')closeProject();if(e.key==='Tab'){const items=[...$('modal-scrim').querySelectorAll('button,a[href]')];const first=items[0],last=items[items.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
+    function renderGame(){const board=$('game-content');$('game-score').textContent=`⭐ ${score} / ${questions.length}`;if(idx>=questions.length){board.replaceChildren();const wrap=document.createElement('div');wrap.className='game-finish';const emoji=document.createElement('span');emoji.textContent=score===questions.length?'🏆':'🌟';const h=document.createElement('h3');h.textContent=tx('Wonderful work!','Bravo!');const p=document.createElement('p');p.textContent=tx(`You earned ${score} out of ${questions.length} stars.`,`Osvojeno je ${score} od ${questions.length} zvezdica.`);const b=document.createElement('button');b.className='game-next';b.textContent=tx('Play again ↻','Igraj ponovo ↻');b.addEventListener('click',()=>{idx=0;score=0;selected=null;renderGame()});wrap.append(emoji,h,p,b);board.appendChild(wrap);return}
+      board.replaceChildren();const q=questions[idx];const letter=document.createElement('div');letter.className='game-mark';letter.textContent=q.letter;const h=document.createElement('h3');h.textContent=tx(`Which picture begins with ${q.letter}?`,`Koja engleska reč počinje slovom ${q.letter}?`);const answers=document.createElement('div');answers.className='answers';q.choices.forEach(([emoji,name])=>{const b=document.createElement('button');b.className='answer';b.disabled=selected!==null;const e=document.createElement('span');e.className='emoji';e.textContent=emoji;const s=document.createElement('span');s.textContent=name;b.setAttribute('aria-label',name);b.append(e,s);if(selected!==null&&name===q.correct)b.classList.add('correct');else if(selected===name)b.classList.add('wrong');b.addEventListener('click',()=>{if(selected!==null)return;selected=name;if(name===q.correct)score++;renderGame()});answers.appendChild(b)});const msg=document.createElement('div');msg.className='game-message';msg.setAttribute('aria-live','polite');if(selected!==null)msg.textContent=selected===q.correct?tx('⭐ Correct! Great job!','⭐ Tačno! Bravo!'):tx(`Nice try! Correct answer: ${q.correct}.`,`Dobar pokušaj! Tačno je: ${q.correct}.`);const btnwrap=document.createElement('div');btnwrap.style.textAlign='center';const next=document.createElement('button');next.className='game-next';next.textContent=idx===questions.length-1?tx('See results →','Pogledaj rezultat →'):tx('Next letter →','Sledeće slovo →');next.hidden=selected===null;next.addEventListener('click',()=>{idx++;selected=null;renderGame()});btnwrap.appendChild(next);board.append(letter,h,answers,msg,btnwrap)}
+    $('reveal').addEventListener('click',()=>{const next=(lastMessage+1)%messages.length;lastMessage=next;$('fortune').textContent=messages[next][lang==='en'?0:1]});
+    $('year').textContent=new Date().getFullYear();applyLang();
+  </script>
 </body>
 </html>
