@@ -1,5 +1,5 @@
 /* ELMD WORLD PWA — offline shell only. External shops/videos always use the internet. */
-const CACHE_NAME = 'elmd-world-pwa-v1-20261116';
+const CACHE_NAME = 'elmd-world-pwa-v1-1-20261116';
 const PRECACHE = [
   './app.html', './index.html', './giggle-abc.html',
   './manifest.webmanifest', './pwa-icon.svg',
