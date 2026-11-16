@@ -115,23 +115,100 @@ footer{border-top:1px solid var(--line);margin-top:42px;padding:23px 0 100px;col
 @media(max-width:360px){.shell{width:calc(100% - 28px)}.wordmark{font-size:13px}.mark{width:35px;height:35px}.install-small{padding:8px 10px}.lang{padding:8px 9px}.world-panel{padding:20px}.hero h1{font-size:42px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.visual:before,.visual:after{animation:none}.button:hover{transform:none}}
 @keyframes orbit{to{transform:rotate(360deg)}}
+
+/* ELMD WORLD v1.1 — a more useful, compact mobile-first home */
+:root{--glass:rgba(26,34,64,.76)}
+.hero-copy{min-width:0}
+.hero .eyebrow{letter-spacing:.18em}
+.quick-title{font-size:10px;font-weight:850;letter-spacing:.19em;color:#b6c8e6;margin-top:22px;margin-bottom:10px;text-transform:uppercase}
+.quick-launch{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.quick-launch a{display:flex;align-items:center;gap:9px;padding:11px 13px;min-height:51px;background:linear-gradient(115deg,#263151b8,#1b243fbb);border:1px solid #bad2ff35;border-radius:13px;font-weight:850;font-size:13px;transition:transform .18s,background .18s,border-color .18s}
+.quick-launch a:hover{background:#2e3c66;border-color:#93ccf1;transform:translateY(-2px)}
+.quick-launch .quick-icon{display:grid;place-items:center;min-width:30px;width:30px;height:30px;background:#2f3659;border-radius:9px;font-size:19px}
+.quick-launch .quick-arrow{margin-left:auto;color:#a5dfeb;font-size:18px}
+.hero-note{margin:18px 0 0;font-size:11px;color:#a6b3d0}
+.world-panel{box-shadow:inset 0 1px 0 #ffffff0c,0 15px 45px #00000026;transition:transform .18s,border-color .18s}
+.world-panel:hover{transform:translateY(-3px);border-color:#adc8f258}
+.panel-links a:focus-visible,.quick-launch a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.share-small{border:1px solid #99cbe24a;color:#ceeef5;background:#172a3b;border-radius:12px;padding:9px 12px;font-weight:850;font-size:12px;white-space:nowrap}
+.share-small:hover{background:#213f51}
+.guardian-panel{margin-top:16px;display:grid;grid-template-columns:auto 1fr;align-items:center;gap:16px;border:1px solid #d5b2ec36;border-radius:22px;padding:21px;background:linear-gradient(110deg,#292348,#161e34)}
+.guardian-symbol{font-size:46px;filter:drop-shadow(0 9px 18px #0008)}
+.guardian-panel h3{font-size:18px;line-height:1.25;letter-spacing:-.01em;margin:0 0 6px}
+.guardian-panel p{color:#bfc8e2;line-height:1.6;font-size:13px;margin:0 0 10px}
+.guardian-panel button{border:0;padding:0;background:transparent;color:#a6ebf6;font-size:12px;font-weight:850}
+.share-toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(84px + env(safe-area-inset-bottom));z-index:70;max-width:calc(100% - 40px);padding:12px 18px;background:#ecf5ff;color:#18223c;border-radius:12px;box-shadow:0 13px 45px #0007;font-size:13px;font-weight:850;text-align:center}
+.no-motion .world-panel{transition:none}
+@media(max-width:760px){
+ .app-top .top-inner{min-height:62px}
+ .hero{display:flex;flex-direction:column;min-height:0;padding:23px 0 16px;gap:0}
+ .hero-copy{order:0;width:100%}
+ .hero .eyebrow{margin-top:12px!important;font-size:9px}
+ .hero h1{font-size:clamp(38px,8.7vw,56px);margin:12px 0 13px}
+ .hero .intro{font-size:14px;line-height:1.6;margin-bottom:0}
+ .hero .ctas{margin-top:16px}
+ .hero .button{padding:10px 14px;min-height:44px}
+ .hero .visual{order:1;min-height:206px;height:206px;max-width:470px;width:100%;margin:10px auto 0}
+ .hero .visual:before{width:194px;height:194px;box-shadow:0 0 0 16px #b58de60b,0 0 0 35px #85c2fc08}
+ .hero .visual:after{width:165px;height:165px}
+ .hero .portal{width:151px}
+ .hero .portal:before{width:47px;height:47px;top:20px;right:24px}
+ .hero .portal:after{width:147px;height:58px;bottom:1px;left:2px}
+ .hero .wolf{font-size:64px;transform:translateY(19px)}
+ .hero .float-label{font-size:10px;padding:5px 8px;border-radius:9px}
+ .hero .label-one{top:6px;left:2%}
+ .hero .label-two{top:40px;right:1%}
+ .hero .label-three{bottom:27px;left:2%}
+ .hero .label-four{bottom:14px;right:1%}
+ .quick-title{margin-top:19px;margin-bottom:8px}
+ .quick-launch a{padding:9px 11px;font-size:12px;min-height:49px}
+ .section{padding:30px 0 25px}
+ .section-heading{margin-bottom:17px}
+ .section-heading h2{font-size:28px}
+ .world-panel{min-height:265px}
+ .world-panel h3{margin:14px 0 8px}
+ .panel-emoji{font-size:54px}
+ .guardian-panel{gap:10px;padding:17px}
+ .guardian-symbol{font-size:34px}
+ .about-panel{padding:19px}
+ .about-panel .signet{display:none}
+ footer{margin-top:24px}
+}
+@media(max-width:410px){
+ .share-small{padding:8px 9px}
+ .lang{padding:8px 10px}
+ .wordmark{font-size:13px}
+ .wordmark small{font-size:8px;letter-spacing:.15em}
+ .quick-launch a{gap:6px;padding:8px 9px}
+ .quick-launch .quick-icon{min-width:27px;width:27px;height:27px;font-size:17px}
+ .hero .float-label{font-size:9px}
+}
+@media(prefers-reduced-motion:reduce){.quick-launch a,.world-panel{transition:none}.quick-launch a:hover,.world-panel:hover{transform:none}}
+
 </style>
 </head>
 <body>
 <a href="#main" class="skip">Skip to content</a>
 <header class="app-top"><div class="shell top-inner">
   <a class="wordmark" href="#home" aria-label="ELMD WORLD home"><span class="mark">✧</span><span>ELMD <b>WORLD</b><small>THE CREATIVE UNIVERSE</small></span></a>
-  <div class="top-actions"><button class="lang" id="language" type="button" aria-label="Switch language">SR</button><button class="install-small" id="install-top" type="button" data-en="Install ↘" data-sr="Instaliraj ↘">Install ↘</button></div>
+  <div class="top-actions"><button class="lang" id="language" type="button" aria-label="Switch language">SR</button><button class="share-small" id="share-app" type="button"><span data-en="Share" data-sr="Podeli">Share</span> ↗</button><button class="install-small" id="install-top" type="button" data-en="Install ↘" data-sr="Instaliraj ↘">Install ↘</button></div>
 </div></header>
 <main class="shell" id="main">
 <section class="hero" id="home">
- <div>
+ <div class="hero-copy">
   <div class="status" id="network-status" aria-live="polite"><span data-en="Connected universe" data-sr="Povezan svet">Connected universe</span></div>
   <div class="eyebrow" style="margin-top:25px" data-en="WELCOME TO OUR CREATIVE HOME" data-sr="DOBRO DOŠLI U NAŠ KREATIVNI DOM">WELCOME TO OUR CREATIVE HOME</div>
   <h1><span data-en="One world." data-sr="Jedan svet.">One world.</span><span class="aurora" data-en="Endless imagination." data-sr="Beskrajna mašta.">Endless imagination.</span></h1>
   <p class="intro" data-en="Music for little dreamers. Wild designs for bold spirits. Stories and art from magical worlds. It all belongs here." data-sr="Muzika za male sanjare. Divlji dizajni za hrabre. Priče i umetnost iz čarobnih svetova. Sve je na jednom mestu.">Music for little dreamers. Wild designs for bold spirits. Stories and art from magical worlds. It all belongs here.</p>
   <div class="ctas"><a class="button primary" href="#worlds"><span data-en="Explore our worlds" data-sr="Istraži naše svetove">Explore our worlds</span> ↗</a><button class="button" id="install-hero" type="button"><span data-en="Get the app" data-sr="Instaliraj aplikaciju">Get the app</span> ↓</button></div>
-  <p class="tiny-caption" data-en="Your favourite ELMD projects, one tap away." data-sr="Tvoji omiljeni ELMD projekti, na jedan dodir.">Your favourite ELMD projects, one tap away.</p>
+  <div class="quick-title" data-en="QUICK ACCESS" data-sr="BRZI PRISTUP">QUICK ACCESS</div>
+  <div class="quick-launch" aria-label="Quick access to our projects">
+    <a href="https://crazyanimal.store/" target="_blank" rel="noopener noreferrer" aria-label="CrazyAnimal shop"><span class="quick-icon" aria-hidden="true">🐆</span><span>CrazyAnimal</span><span class="quick-arrow">↗</span></a>
+    <a href="https://www.youtube.com/channel/UCWxPW0jCv-XvurY1vjikR3Q" target="_blank" rel="noopener noreferrer" aria-label="GiggleRhymes YouTube"><span class="quick-icon" aria-hidden="true">🐘</span><span>GiggleRhymes</span><span class="quick-arrow">↗</span></a>
+    <a href="./giggle-abc.html"><span class="quick-icon" aria-hidden="true">🌈</span><span data-en="ABC game" data-sr="ABC igra">ABC game</span><span class="quick-arrow">→</span></a>
+    <a href="https://elmdworld.blogspot.com/" target="_blank" rel="noopener noreferrer"><span class="quick-icon" aria-hidden="true">📖</span><span data-en="Our stories" data-sr="Naše priče">Our stories</span><span class="quick-arrow">↗</span></a>
+  </div>
+  <p class="hero-note" data-en="Original creations · Made with heart" data-sr="Originalna dela · Stvorena srcem">Original creations · Made with heart</p>
  </div>
  <div class="visual" aria-label="Moonlight portal with guardian wolf"><div class="portal"><span class="wolf" aria-hidden="true">🐺</span></div><span class="float-label label-one">🌈 GiggleRhymes</span><span class="float-label label-two">🐆 CrazyAnimal</span><span class="float-label label-three">📖 Stories</span><span class="float-label label-four">✨ MTASIC Art</span></div>
 </section>
@@ -157,20 +234,35 @@ footer{border-top:1px solid var(--line);margin-top:42px;padding:23px 0 100px;col
     <a href="./index.html"><span aria-hidden="true">🌐</span><span data-en="Full website →" data-sr="Ceo sajt →">Full website →</span></a>
   </div>
 </section>
+<section class="guardian-panel" id="guardian-words" aria-labelledby="guardian-heading">
+ <span class="guardian-symbol" aria-hidden="true">🌙🐺</span>
+ <div><div class="eyebrow" data-en="A NOTE FROM THE GUARDIANS" data-sr="PORUKA ČUVARA">A NOTE FROM THE GUARDIANS</div>
+ <h3 id="guardian-heading" data-en="The light is always near." data-sr="Svetlost je uvek blizu.">The light is always near.</h3>
+ <p id="guardian-message" aria-live="polite" data-en="Every great world begins with one brave dream." data-sr="Svaki veliki svet počinje jednim hrabrim snom.">Every great world begins with one brave dream.</p>
+ <button id="guardian-next" type="button" data-en="Another message ✨" data-sr="Još jedna poruka ✨">Another message ✨</button></div>
+</section>
 <section class="section" id="about"><div class="about-panel"><div><div class="eyebrow" data-en="OUR STORY" data-sr="NAŠA PRIČA">OUR STORY</div><h2 data-en="Created with heart." data-sr="Stvoreno srcem.">Created with heart.</h2><p data-en="ELMD WORLD connects original music, art, fantasy storytelling and design. One creative home — with more chapters to come. External shops and videos need an internet connection." data-sr="ELMD WORLD povezuje originalnu muziku, umetnost, fantazi priče i dizajn. Jedan kreativni dom — sa još mnogo poglavlja. Za spoljne prodavnice i video sadržaje potreban je internet.">ELMD WORLD connects original music, art, fantasy storytelling and design. One creative home — with more chapters to come. External shops and videos need an internet connection.</p></div><span class="signet" aria-hidden="true">ELMD</span></div></section>
 </main>
-<footer><div class="shell foot-content"><span>© <span id="year">2026</span> ELMD WORLD · v1.0</span><a href="./index.html" data-en="Visit our original website ↗" data-sr="Poseti naš originalni sajt ↗">Visit our original website ↗</a></div></footer>
+<footer><div class="shell foot-content"><span>© <span id="year">2026</span> ELMD WORLD · v1.1</span><a href="./index.html" data-en="Visit our original website ↗" data-sr="Poseti naš originalni sajt ↗">Visit our original website ↗</a></div></footer>
 <nav class="bottom-nav" aria-label="App navigation">
   <a href="#home" aria-current="page"><span aria-hidden="true">⌂</span><span data-en="Home" data-sr="Početna">Home</span></a>
   <a href="#worlds"><span aria-hidden="true">✦</span><span data-en="Worlds" data-sr="Svetovi">Worlds</span></a>
   <a href="#discover"><span aria-hidden="true">⌕</span><span data-en="Discover" data-sr="Otkrij">Discover</span></a>
   <a href="#about"><span aria-hidden="true">♡</span><span data-en="About" data-sr="O nama">About</span></a>
 </nav>
+<div id="share-toast" class="share-toast" role="status" aria-live="polite" hidden></div>
 <div class="install-backdrop" id="install-backdrop" hidden><div class="install-sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title"><button class="sheet-close" id="sheet-close" type="button" aria-label="Close">×</button><div class="sheet-emoji" aria-hidden="true">📲</div><h2 id="sheet-title" data-en="Install ELMD WORLD" data-sr="Instaliraj ELMD WORLD">Install ELMD WORLD</h2><p id="sheet-text"></p><button class="button primary" id="sheet-done" type="button" data-en="Got it" data-sr="Razumem">Got it</button></div></div>
 <script>
 (function(){
  'use strict';
- var lang='en',deferredInstall=null,previousFocus=null;
+ var lang='en',deferredInstall=null,previousFocus=null,guardianIndex=0,toastTimer=null;
+ var guardianMessages=[
+  ['Every great world begins with one brave dream.','Svaki veliki svet počinje jednim hrabrim snom.'],
+  ['The smallest kindness can light the darkest forest.','I najmanja dobrota može osvetliti najtamniju šumu.'],
+  ['A true guardian protects dreams and gives them wings.','Pravi čuvar štiti snove i daje im krila.'],
+  ['Our stories become brighter when we share them.','Naše priče postaju svetlije kada ih delimo.'],
+  ['Adventure lives wherever imagination is welcome.','Avantura živi svuda gde je mašta dobrodošla.']
+ ];
  try{lang=localStorage.getItem('elmd-app-lang')==='sr'?'sr':'en'}catch(err){}
  function setLang(next){
    lang=next;document.documentElement.lang=lang;
@@ -179,7 +271,25 @@ footer{border-top:1px solid var(--line);margin-top:42px;padding:23px 0 100px;col
    document.title=lang==='en'?'ELMD WORLD · The App':'ELMD WORLD · Aplikacija';
    try{localStorage.setItem('elmd-app-lang',lang)}catch(err){}
    updateNetwork();
+   document.getElementById('guardian-message').textContent=guardianMessages[guardianIndex][lang==='en'?0:1];
  }
+ document.getElementById('guardian-next').addEventListener('click',function(){
+  guardianIndex=(guardianIndex+1)%guardianMessages.length;
+  document.getElementById('guardian-message').textContent=guardianMessages[guardianIndex][lang==='en'?0:1];
+ });
+ function toast(message){
+  var el=document.getElementById('share-toast');el.textContent=message;el.hidden=false;
+  if(toastTimer)clearTimeout(toastTimer);
+  toastTimer=setTimeout(function(){el.hidden=true},3000);
+ }
+ document.getElementById('share-app').addEventListener('click',async function(){
+  var data={title:'ELMD WORLD',text:lang==='en'?'Explore our creative universe.':'Istraži naš kreativni svet.',url:'https://milostasic1.github.io/elmd-world./app.html'};
+  try{
+    if(navigator.share){await navigator.share(data);return}
+    if(navigator.clipboard&&navigator.clipboard.writeText){await navigator.clipboard.writeText(data.url);toast(lang==='en'?'App link copied!':'Link aplikacije je kopiran!');return}
+    window.prompt(lang==='en'?'Copy this link:':'Kopiraj ovaj link:',data.url);
+  }catch(err){if(err.name!=='AbortError')toast(lang==='en'?'Share unavailable — please copy the page URL.':'Deljenje nije dostupno — kopiraj adresu stranice.')}
+ });
  document.getElementById('language').addEventListener('click',function(){setLang(lang==='en'?'sr':'en')});
  function updateNetwork(){
    var indicator=document.getElementById('network-status');
