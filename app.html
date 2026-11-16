@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#090c1d">
+<meta name="description" content="ELMD WORLD — discover CrazyAnimal, GiggleRhymes, fantasy art, stories and creative worlds in one app.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ELMD WORLD">
+<meta property="og:title" content="ELMD WORLD | The App">
+<meta property="og:description" content="One world. Endless imagination. Explore all ELMD projects.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="./cfa8d62f-1c7b-4e05-979c-d8eb7b715c96.png">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="./pwa-icon.svg">
+<link rel="apple-touch-icon" href="./pwa-icon-192.png">
+<title>ELMD WORLD · The App</title>
+<style>
+:root{color-scheme:dark;--base:#080b19;--surface:#12172b;--surface2:#171e35;--line:rgba(197,207,247,.13);--text:#f8f7ff;--muted:#aeb5ca;--violet:#be9bff;--aqua:#8df1ee;--gold:#f8d18d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{margin:0;min-height:100vh;background:var(--base);color:var(--text);font:15px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 10% 10%,rgba(95,62,158,.27),transparent 43%),radial-gradient(ellipse at 80% 20%,rgba(26,100,132,.19),transparent 39%),radial-gradient(ellipse at 40% 94%,rgba(65,54,125,.17),transparent 50%)}
+body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.35;background-image:radial-gradient(1px 1px at 15% 17%,white 50%,transparent 55%),radial-gradient(1px 1px at 57% 9%,white 50%,transparent 55%),radial-gradient(2px 2px at 88% 27%,white 50%,transparent 55%),radial-gradient(1px 1px at 28% 81%,white 50%,transparent 55%);background-size:450px 440px}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.skip{position:absolute;left:14px;top:-120px;background:#fff;color:#080c1d;padding:10px 15px;z-index:999}.skip:focus{top:12px}
+.shell{width:min(1080px,calc(100% - 36px));margin:auto}
+.app-top{position:sticky;top:0;z-index:40;border-bottom:1px solid var(--line);background:rgba(8,11,25,.83);backdrop-filter:blur(22px)}
+.top-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:73px}
+.wordmark{display:flex;align-items:center;gap:11px;font-weight:950;letter-spacing:.07em;font-size:15px;white-space:nowrap}
+.mark{flex:none;width:39px;height:39px;border:1px solid rgba(156,214,255,.42);border-radius:13px;display:grid;place-items:center;color:#e2dbff;background:linear-gradient(145deg,#2d3264,#122037);box-shadow:0 0 27px #735ec830;font-size:21px}
+.wordmark span b{color:#aee7ff}.wordmark small{display:block;font-size:9px;color:#a2aecb;letter-spacing:.24em;line-height:1.25;margin-top:2px}
+.top-actions{display:flex;align-items:center;gap:9px}
+.lang,.install-small{border:1px solid var(--line);color:#f5f6ff;background:#1a2037;border-radius:12px;padding:9px 13px;font-size:12px;font-weight:800}
+.install-small{background:linear-gradient(125deg,#cbaaf7,#95e6f4);color:#142037;border:none}
+.status{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(141,241,238,.19);background:rgba(11,58,65,.22);padding:6px 10px;border-radius:50px;color:#b5e9e7;font-weight:800;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.status:before{content:"";background:#7fe0c5;width:7px;height:7px;border-radius:50%;box-shadow:0 0 12px #7fe0c5}
+.status.offline{color:#f5d4a0;background:rgba(120,80,30,.15)}.status.offline:before{background:#f5d4a0;box-shadow:none}
+.hero{display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:32px;min-height:500px;padding:55px 0 66px}
+.eyebrow{text-transform:uppercase;font-size:10px;letter-spacing:.23em;font-weight:900;color:var(--aqua)}
+h1,h2,h3,p{margin-top:0}
+h1{font-size:clamp(43px,6vw,78px);letter-spacing:-.065em;line-height:1.045;margin:18px 0 24px;font-weight:900}
+.aurora{display:block;background:linear-gradient(105deg,#a4e7fc 0%,#c39dff 52%,#f4cda6 100%);background-clip:text;-webkit-background-clip:text;color:transparent}
+.intro{font-size:16px;color:#bcc5dc;line-height:1.78;max-width:490px}
+.ctas{display:flex;flex-wrap:wrap;gap:11px;margin-top:30px}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;border-radius:13px;padding:11px 18px;font-size:13px;font-weight:850;border:1px solid rgba(194,203,248,.19);background:#202742;color:white;transition:transform .2s,border .2s}
+.button:hover{transform:translateY(-2px);border-color:#b8adf1}.button.primary{background:linear-gradient(120deg,#bda1fa,#90eaf0);color:#15213c;border:none;box-shadow:0 14px 36px #795ed52b}
+.tiny-caption{color:#8593b2;font-size:11px;margin-top:17px}
+.visual{min-height:395px;position:relative;display:grid;place-items:center;isolation:isolate}
+.visual:before{content:"";position:absolute;width:min(390px,94%);aspect-ratio:1;border:1px solid #8e87dc3b;border-radius:50%;box-shadow:0 0 0 32px #b58de60b,0 0 0 65px #85c2fc08;animation:orbit 60s linear infinite}
+.visual:after{content:"";position:absolute;width:min(320px,80%);aspect-ratio:1;border:1px dashed #d8d6fc55;border-radius:50%;animation:orbit 82s linear infinite reverse}
+.portal{position:relative;width:250px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 64% 28%,#5762a4,#242d60 46%,#10162f 76%);border:2px solid #b5bcfa9a;box-shadow:inset 0 0 55px #7bbef53b,0 0 80px #7768ff40}
+.portal:before{content:"";position:absolute;width:80px;height:80px;border-radius:50%;top:35px;right:40px;background:#e3e9ff;box-shadow:0 0 36px #aeeafe}
+.portal:after{content:"";position:absolute;width:235px;height:100px;bottom:4px;left:6px;background:linear-gradient(#3f5290,#141c3a);clip-path:polygon(0 100%,0 78%,13% 42%,30% 86%,50% 18%,69% 76%,83% 36%,100% 90%,100% 100%)}
+.wolf{font-size:108px;z-index:2;filter:drop-shadow(0 15px 15px #0008);transform:translateY(30px)}
+.float-label{position:absolute;z-index:3;padding:8px 12px;background:#19213ced;border:1px solid #c6c6fc38;border-radius:13px;color:#f1f3ff;box-shadow:0 12px 25px #0005;font-weight:800;font-size:12px;white-space:nowrap}
+.label-one{left:0;top:53px}.label-two{right:-3px;top:107px}.label-three{left:10px;bottom:44px}.label-four{right:8px;bottom:35px}
+.section{padding:46px 0 40px;scroll-margin-top:80px}
+.section-heading{display:flex;align-items:end;justify-content:space-between;gap:14px;margin-bottom:24px}
+.section-heading h2{font-size:clamp(28px,4.2vw,40px);letter-spacing:-.044em;line-height:1.15;margin:6px 0 0}
+.section-heading p{max-width:370px;color:var(--muted);font-size:13px;margin:0}
+.world-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.world-panel{position:relative;overflow:hidden;min-height:315px;border:1px solid var(--line);border-radius:23px;padding:25px;display:flex;flex-direction:column;background:linear-gradient(135deg,#1d2440,#141b33)}
+.world-panel:before{content:"";position:absolute;width:260px;height:260px;right:-85px;top:-108px;border-radius:50%;background:var(--orb);opacity:.68}
+.world-panel.crazy{--orb:radial-gradient(circle,#a752d9b3,transparent 70%)}
+.world-panel.giggle{--orb:radial-gradient(circle,#40b8d89c,transparent 70%)}
+.world-panel.art{--orb:radial-gradient(circle,#dfbb6d82,transparent 70%)}
+.world-panel.stories{--orb:radial-gradient(circle,#7b6ddc94,transparent 70%)}
+.panel-top{display:flex;align-items:flex-start;justify-content:space-between;position:relative;gap:12px}
+.pill{font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;border:1px solid #ebedff22;border-radius:100px;background:#0e173b55;padding:5px 10px}
+.panel-emoji{font-size:66px;line-height:1;filter:drop-shadow(0 10px 14px #0007)}
+.world-panel h3{font-size:30px;letter-spacing:-.04em;line-height:1.15;margin:28px 0 9px;position:relative}
+.world-panel p{color:#b8c2d8;font-size:13px;line-height:1.75;max-width:370px;position:relative}
+.panel-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;position:relative}
+.panel-links a{border:1px solid #bfcafc33;border-radius:10px;background:#0d1734aa;padding:9px 11px;font-size:12px;font-weight:850}
+.panel-links a:hover{background:#253357}
+.panel-links .hot{background:#d2b8f1;color:#172036;border-color:transparent}
+.discovery{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
+.feature{border:1px solid var(--line);border-radius:23px;padding:26px;min-height:190px;background:linear-gradient(120deg,#282047,#121c32)}
+.feature.alt{background:linear-gradient(140deg,#132c38,#161e34)}
+.feature h3{font-size:23px;letter-spacing:-.025em;margin:10px 0}
+.feature p{font-size:13px;color:#bbc4da;max-width:380px}
+.text-link{display:inline-flex;align-items:center;gap:6px;font-weight:850;font-size:12px;color:#c8f7ff}
+.quick-links{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
+.quick-links a{border:1px solid var(--line);border-radius:15px;padding:15px;background:#151c32;min-height:92px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:9px;font-weight:800;font-size:12px}
+.quick-links a span{font-size:24px}
+.about-panel{display:flex;align-items:center;justify-content:space-between;gap:22px;border:1px solid var(--line);padding:28px;border-radius:22px;background:linear-gradient(105deg,#151b31,#1c2140)}
+.about-panel h2{font-size:29px;line-height:1.15;margin:8px 0}.about-panel p{color:var(--muted);font-size:13px;max-width:650px;margin:0}
+.signet{font-size:58px;color:#b5d9ff;font-weight:950;letter-spacing:-.09em}
+footer{border-top:1px solid var(--line);margin-top:42px;padding:23px 0 100px;color:#93a1bd;font-size:11px}
+.foot-content{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.foot-content a{color:#c3dffa}
+.bottom-nav{display:none}
+.install-backdrop[hidden]{display:none}
+.install-backdrop{position:fixed;z-index:100;inset:0;background:#040716b8;display:grid;place-items:end center;padding:18px}
+.install-sheet{width:min(440px,100%);background:#18203a;border:1px solid #d4c3fa50;border-radius:24px;padding:26px;box-shadow:0 20px 65px #0009;position:relative}
+.sheet-close{position:absolute;right:18px;top:14px;border:none;background:transparent;color:white;font-size:25px}
+.sheet-emoji{font-size:40px;margin-bottom:10px}.install-sheet h2{font-size:23px;margin-bottom:9px}.install-sheet p{color:#b9c5dd;font-size:14px}
+@media(max-width:760px){
+  .hero{grid-template-columns:1fr;padding:37px 0 27px;gap:0}
+  h1{font-size:clamp(43px,10vw,65px)}
+  .visual{min-height:310px;order:-1;margin-bottom:12px}.portal{width:210px}.visual:before{width:280px}.visual:after{width:244px}.wolf{font-size:88px}
+  .float-label{font-size:10px}.label-one{left:4%;top:45px}.label-two{right:3%;top:100px}.label-three{left:4%;bottom:40px}.label-four{right:3%;bottom:35px}
+  .world-grid{grid-template-columns:1fr}
+  .section-heading{display:block}.section-heading p{margin-top:8px}
+  .discovery{grid-template-columns:1fr}.quick-links{grid-template-columns:repeat(2,1fr)}
+  .about-panel{align-items:flex-start}.signet{font-size:42px}
+  .bottom-nav{position:fixed;z-index:50;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:7px 7px max(8px,env(safe-area-inset-bottom));background:#10172cf5;backdrop-filter:blur(17px);border-top:1px solid #b4c7f932}
+  .bottom-nav a{text-align:center;font-size:10px;font-weight:850;color:#a7b4d2;display:flex;flex-direction:column;align-items:center;gap:2px;min-height:47px;justify-content:center;border-radius:10px}
+  .bottom-nav a span{font-size:20px;line-height:1.1}.bottom-nav a[aria-current="page"]{color:#aeeaf7;background:#27334d}
+}
+@media(max-width:360px){.shell{width:calc(100% - 28px)}.wordmark{font-size:13px}.mark{width:35px;height:35px}.install-small{padding:8px 10px}.lang{padding:8px 9px}.world-panel{padding:20px}.hero h1{font-size:42px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.visual:before,.visual:after{animation:none}.button:hover{transform:none}}
+@keyframes orbit{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+<header class="app-top"><div class="shell top-inner">
+  <a class="wordmark" href="#home" aria-label="ELMD WORLD home"><span class="mark">✧</span><span>ELMD <b>WORLD</b><small>THE CREATIVE UNIVERSE</small></span></a>
+  <div class="top-actions"><button class="lang" id="language" type="button" aria-label="Switch language">SR</button><button class="install-small" id="install-top" type="button" data-en="Install ↘" data-sr="Instaliraj ↘">Install ↘</button></div>
+</div></header>
+<main class="shell" id="main">
+<section class="hero" id="home">
+ <div>
+  <div class="status" id="network-status" aria-live="polite"><span data-en="Connected universe" data-sr="Povezan svet">Connected universe</span></div>
+  <div class="eyebrow" style="margin-top:25px" data-en="WELCOME TO OUR CREATIVE HOME" data-sr="DOBRO DOŠLI U NAŠ KREATIVNI DOM">WELCOME TO OUR CREATIVE HOME</div>
+  <h1><span data-en="One world." data-sr="Jedan svet.">One world.</span><span class="aurora" data-en="Endless imagination." data-sr="Beskrajna mašta.">Endless imagination.</span></h1>
+  <p class="intro" data-en="Music for little dreamers. Wild designs for bold spirits. Stories and art from magical worlds. It all belongs here." data-sr="Muzika za male sanjare. Divlji dizajni za hrabre. Priče i umetnost iz čarobnih svetova. Sve je na jednom mestu.">Music for little dreamers. Wild designs for bold spirits. Stories and art from magical worlds. It all belongs here.</p>
+  <div class="ctas"><a class="button primary" href="#worlds"><span data-en="Explore our worlds" data-sr="Istraži naše svetove">Explore our worlds</span> ↗</a><button class="button" id="install-hero" type="button"><span data-en="Get the app" data-sr="Instaliraj aplikaciju">Get the app</span> ↓</button></div>
+  <p class="tiny-caption" data-en="Your favourite ELMD projects, one tap away." data-sr="Tvoji omiljeni ELMD projekti, na jedan dodir.">Your favourite ELMD projects, one tap away.</p>
+ </div>
+ <div class="visual" aria-label="Moonlight portal with guardian wolf"><div class="portal"><span class="wolf" aria-hidden="true">🐺</span></div><span class="float-label label-one">🌈 GiggleRhymes</span><span class="float-label label-two">🐆 CrazyAnimal</span><span class="float-label label-three">📖 Stories</span><span class="float-label label-four">✨ MTASIC Art</span></div>
+</section>
+<section class="section" id="worlds">
+  <div class="section-heading"><div><div class="eyebrow" data-en="OUR MAIN PROJECTS" data-sr="NAŠI GLAVNI PROJEKTI">OUR MAIN PROJECTS</div><h2 data-en="Choose your world" data-sr="Izaberi svoj svet">Choose your world</h2></div><p data-en="CrazyAnimal and GiggleRhymes come first. Discover, watch and explore through their official links." data-sr="CrazyAnimal i GiggleRhymes su na prvom mestu. Istraži i pogledaj njihov sadržaj putem zvaničnih linkova.">CrazyAnimal and GiggleRhymes come first. Discover, watch and explore through their official links.</p></div>
+  <div class="world-grid">
+    <article class="world-panel crazy"><div class="panel-top"><span class="pill" data-en="FANTASY STREETWEAR" data-sr="FANTAZI ODEĆA">FANTASY STREETWEAR</span><span class="panel-emoji" aria-hidden="true">🐆</span></div><h3>CrazyAnimal</h3><p data-en="Unleash your wild side: original fantasy apparel, heroic characters and powerful animal designs." data-sr="Oslobodi svoju divlju stranu: originalna odeća, junakinje i moćne životinje.">Unleash your wild side: original fantasy apparel, heroic characters and powerful animal designs.</p><div class="panel-links"><a class="hot" href="https://crazyanimal.store/" target="_blank" rel="noopener noreferrer" data-en="Visit store ↗" data-sr="Otvori prodavnicu ↗">Visit store ↗</a><a href="https://www.teepublic.com/user/crazyanimalstudio" target="_blank" rel="noopener noreferrer">TeePublic ↗</a></div></article>
+    <article class="world-panel giggle"><div class="panel-top"><span class="pill" data-en="MUSIC & LEARNING" data-sr="MUZIKA I UČENJE">MUSIC & LEARNING</span><span class="panel-emoji" aria-hidden="true">🐘</span></div><h3>GiggleRhymes</h3><p data-en="Original English songs and cheerful animal friends. Discover our videos and play a fun A–Z learning game." data-sr="Originalne pesmice na engleskom i veseli životinjski drugari. Pogledaj videe i igraj ABC igru.">Original English songs and cheerful animal friends. Discover our videos and play a fun A–Z learning game.</p><div class="panel-links"><a class="hot" href="https://www.youtube.com/channel/UCWxPW0jCv-XvurY1vjikR3Q" target="_blank" rel="noopener noreferrer" data-en="Watch videos ↗" data-sr="Gledaj videe ↗">Watch videos ↗</a><a href="./giggle-abc.html" data-en="Play ABC →" data-sr="Igraj ABC →">Play ABC →</a></div></article>
+    <article class="world-panel art"><div class="panel-top"><span class="pill" data-en="FANTASY ART" data-sr="FANTAZI UMETNOST">FANTASY ART</span><span class="panel-emoji" aria-hidden="true">🐺</span></div><h3>MTASIC Art</h3><p data-en="Moonlight Guardians, enchanted landscapes and the guardian wolves Dragiša and Emilija." data-sr="Čuvari mesečine, začarani predeli i vukovi čuvari Dragiša i Emilija.">Moonlight Guardians, enchanted landscapes and the guardian wolves Dragiša and Emilija.</p><div class="panel-links"><a class="hot" href="https://www.deviantart.com/mtasic" target="_blank" rel="noopener noreferrer">DeviantArt ↗</a><a href="https://www.pinterest.com/milos986/" target="_blank" rel="noopener noreferrer">Pinterest ↗</a></div></article>
+    <article class="world-panel stories"><div class="panel-top"><span class="pill" data-en="STORIES & LEGENDS" data-sr="PRIČE I LEGENDE">STORIES & LEGENDS</span><span class="panel-emoji" aria-hidden="true">📖</span></div><h3 data-en="Magical Stories" data-sr="Čarobne priče">Magical Stories</h3><p data-en="Enter our universe of moonlight, courage, love and mysterious adventures — from our own stories and blog." data-sr="Uđi u naš svet mesečine, hrabrosti, ljubavi i tajanstvenih avantura — kroz naše priče i blog.">Enter our universe of moonlight, courage, love and mysterious adventures — from our own stories and blog.</p><div class="panel-links"><a class="hot" href="https://elmdworld.blogspot.com/" target="_blank" rel="noopener noreferrer" data-en="Read the blog ↗" data-sr="Čitaj blog ↗">Read the blog ↗</a><a href="https://note.com/mtasicart/m/mbc7e6a2f9495" target="_blank" rel="noopener noreferrer">Note.com ↗</a></div></article>
+  </div>
+</section>
+<section class="section" id="discover">
+  <div class="section-heading"><div><div class="eyebrow" data-en="EXPLORE MORE" data-sr="OTKRIJ JOŠ">EXPLORE MORE</div><h2 data-en="A universe that grows" data-sr="Svet koji raste">A universe that grows</h2></div></div>
+  <div class="discovery">
+    <div class="feature"><div class="eyebrow">🌙 MOONLIGHT GUARDIANS</div><h3 data-en="Art with a story" data-sr="Umetnost sa pričom">Art with a story</h3><p data-en="Explore our original digital fantasy collection and its magical guardians." data-sr="Istraži našu originalnu kolekciju digitalne fantazi umetnosti i magične čuvare.">Explore our original digital fantasy collection and its magical guardians.</p><a class="text-link" href="https://mtasicartcollection.gumroad.com/l/biyco" target="_blank" rel="noopener noreferrer" data-en="Explore the collection ↗" data-sr="Pogledaj kolekciju ↗">Explore the collection ↗</a></div>
+    <div class="feature alt"><div class="eyebrow">🌈 GIGGLERHYMES ABC</div><h3 data-en="Play & learn A–Z" data-sr="Igraj i uči A–Z">Play & learn A–Z</h3><p data-en="A little interactive adventure with animals, letters and stars." data-sr="Mala interaktivna avantura sa životinjama, slovima i zvezdicama.">A little interactive adventure with animals, letters and stars.</p><a class="text-link" href="./giggle-abc.html" data-en="Start the game →" data-sr="Pokreni igru →">Start the game →</a></div>
+  </div>
+  <div class="quick-links">
+    <a href="https://www.facebook.com/ELMDSHOP/" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">👥</span>Facebook ↗</a>
+    <a href="https://www.instagram.com/mtshop986/" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">📷</span>Instagram ↗</a>
+    <a href="https://x.com/MTASICArt" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">✦</span>X ↗</a>
+    <a href="./index.html"><span aria-hidden="true">🌐</span><span data-en="Full website →" data-sr="Ceo sajt →">Full website →</span></a>
+  </div>
+</section>
+<section class="section" id="about"><div class="about-panel"><div><div class="eyebrow" data-en="OUR STORY" data-sr="NAŠA PRIČA">OUR STORY</div><h2 data-en="Created with heart." data-sr="Stvoreno srcem.">Created with heart.</h2><p data-en="ELMD WORLD connects original music, art, fantasy storytelling and design. One creative home — with more chapters to come. External shops and videos need an internet connection." data-sr="ELMD WORLD povezuje originalnu muziku, umetnost, fantazi priče i dizajn. Jedan kreativni dom — sa još mnogo poglavlja. Za spoljne prodavnice i video sadržaje potreban je internet.">ELMD WORLD connects original music, art, fantasy storytelling and design. One creative home — with more chapters to come. External shops and videos need an internet connection.</p></div><span class="signet" aria-hidden="true">ELMD</span></div></section>
+</main>
+<footer><div class="shell foot-content"><span>© <span id="year">2026</span> ELMD WORLD · v1.0</span><a href="./index.html" data-en="Visit our original website ↗" data-sr="Poseti naš originalni sajt ↗">Visit our original website ↗</a></div></footer>
+<nav class="bottom-nav" aria-label="App navigation">
+  <a href="#home" aria-current="page"><span aria-hidden="true">⌂</span><span data-en="Home" data-sr="Početna">Home</span></a>
+  <a href="#worlds"><span aria-hidden="true">✦</span><span data-en="Worlds" data-sr="Svetovi">Worlds</span></a>
+  <a href="#discover"><span aria-hidden="true">⌕</span><span data-en="Discover" data-sr="Otkrij">Discover</span></a>
+  <a href="#about"><span aria-hidden="true">♡</span><span data-en="About" data-sr="O nama">About</span></a>
+</nav>
+<div class="install-backdrop" id="install-backdrop" hidden><div class="install-sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title"><button class="sheet-close" id="sheet-close" type="button" aria-label="Close">×</button><div class="sheet-emoji" aria-hidden="true">📲</div><h2 id="sheet-title" data-en="Install ELMD WORLD" data-sr="Instaliraj ELMD WORLD">Install ELMD WORLD</h2><p id="sheet-text"></p><button class="button primary" id="sheet-done" type="button" data-en="Got it" data-sr="Razumem">Got it</button></div></div>
+<script>
+(function(){
+ 'use strict';
+ var lang='en',deferredInstall=null,previousFocus=null;
+ try{lang=localStorage.getItem('elmd-app-lang')==='sr'?'sr':'en'}catch(err){}
+ function setLang(next){
+   lang=next;document.documentElement.lang=lang;
+   document.querySelectorAll('[data-en][data-sr]').forEach(function(el){el.textContent=el.getAttribute('data-'+lang)});
+   document.getElementById('language').textContent=lang==='en'?'SR':'EN';
+   document.title=lang==='en'?'ELMD WORLD · The App':'ELMD WORLD · Aplikacija';
+   try{localStorage.setItem('elmd-app-lang',lang)}catch(err){}
+   updateNetwork();
+ }
+ document.getElementById('language').addEventListener('click',function(){setLang(lang==='en'?'sr':'en')});
+ function updateNetwork(){
+   var indicator=document.getElementById('network-status');
+   var span=indicator.querySelector('span');
+   if(navigator.onLine){indicator.classList.remove('offline');span.textContent=lang==='en'?'Connected universe':'Povezan svet'}
+   else{indicator.classList.add('offline');span.textContent=lang==='en'?'Offline mode':'Režim bez interneta'}
+ }
+ window.addEventListener('online',updateNetwork);window.addEventListener('offline',updateNetwork);
+ var backdrop=document.getElementById('install-backdrop');
+ function showHelp(){
+   previousFocus=document.activeElement;
+   var ios=/iphone|ipad|ipod/i.test(navigator.userAgent);
+   var mobile=/android/i.test(navigator.userAgent);
+   var message=ios
+    ? (lang==='en'?'In Safari, tap Share, then Add to Home Screen.':'U Safariju dodirni Deli, pa Dodaj na početni ekran.')
+    : mobile
+    ? (lang==='en'?'In Chrome, open the three-dot menu and choose Install app or Add to Home screen.':'U Chrome-u otvori meni sa tri tačke i izaberi Instaliraj aplikaciju ili Dodaj na početni ekran.')
+    : (lang==='en'?'In Chrome or Edge, use the Install icon in the address bar, or look for Install app in the browser menu.':'U Chrome-u ili Edge-u izaberi ikonicu za instalaciju u adresnoj traci ili opciju Instaliraj aplikaciju u meniju.');
+   document.getElementById('sheet-text').textContent=message;
+   backdrop.hidden=false;document.getElementById('sheet-close').focus();
+ }
+ function closeHelp(){backdrop.hidden=true;if(previousFocus)previousFocus.focus()}
+ document.getElementById('sheet-close').addEventListener('click',closeHelp);
+ document.getElementById('sheet-done').addEventListener('click',closeHelp);
+ backdrop.addEventListener('click',function(e){if(e.target===backdrop)closeHelp()});
+ document.addEventListener('keydown',function(e){
+   if(backdrop.hidden)return;
+   if(e.key==='Escape'){closeHelp();return}
+   if(e.key==='Tab'){var items=[document.getElementById('sheet-close'),document.getElementById('sheet-done')];var first=items[0],last=items[1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}
+ });
+ function installed(){return window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone===true}
+ function refreshInstallButtons(){['install-hero','install-top'].forEach(function(id){document.getElementById(id).hidden=installed()})}
+ window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();deferredInstall=e});
+ window.addEventListener('appinstalled',function(){deferredInstall=null;refreshInstallButtons()});
+ function install(){
+   if(deferredInstall){var prompt=deferredInstall;deferredInstall=null;prompt.prompt();Promise.resolve(prompt.userChoice).catch(function(){});return}
+   showHelp();
+ }
+ document.getElementById('install-top').addEventListener('click',install);
+ document.getElementById('install-hero').addEventListener('click',install);
+ if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('./sw.js').catch(function(){})})}
+ document.getElementById('year').textContent=new Date().getFullYear();
+ var navItems=[].slice.call(document.querySelectorAll('.bottom-nav a'));
+ if('IntersectionObserver' in window){
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){if(entry.isIntersecting){navItems.forEach(function(a){if(a.getAttribute('href')==='#'+entry.target.id){a.setAttribute('aria-current','page')}else{a.removeAttribute('aria-current')}})}});
+  },{rootMargin:'-15% 0px -66% 0px'});
+  ['home','worlds','discover','about'].forEach(function(id){observer.observe(document.getElementById(id))});
+ }
+ setLang(lang);refreshInstallButtons();
+})();
+</script>
+</body>
+</html>
