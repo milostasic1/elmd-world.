@@ -1,0 +1,52 @@
+{
+  "id": "./app.html",
+  "name": "ELMD WORLD — One World. Endless Imagination",
+  "short_name": "ELMD WORLD",
+  "description": "CrazyAnimal, GiggleRhymes, MTASIC Art Collection and original stories in one creative universe.",
+  "lang": "en",
+  "start_url": "./app.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#080b19",
+  "theme_color": "#090c1d",
+  "orientation": "any",
+  "categories": [
+    "entertainment",
+    "education",
+    "lifestyle"
+  ],
+  "icons": [
+    {
+      "src": "./pwa-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./pwa-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./pwa-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "GiggleRhymes ABC",
+      "short_name": "ABC",
+      "url": "./giggle-abc.html",
+      "description": "Play the A to Z learning game"
+    },
+    {
+      "name": "Our creative worlds",
+      "short_name": "Worlds",
+      "url": "./app.html#worlds",
+      "description": "Explore the ELMD projects"
+    }
+  ]
+}
