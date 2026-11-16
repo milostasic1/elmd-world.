@@ -160,7 +160,16 @@ footer{background:linear-gradient(180deg,transparent,#0c142b 60%)}
 }
 @media(prefers-reduced-motion:reduce){.project-card:hover,.btn:hover{transform:none}}
 
+
+/* ELMD WORLD PWA access banner */
+.pwa-banner{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:22px auto 0;padding:18px 22px;border:1px solid rgba(173,202,254,.27);border-radius:17px;background:linear-gradient(110deg,#252347,#162841)}
+.pwa-banner strong{display:block;font-size:18px;letter-spacing:-.02em;color:#f4f1ff}
+.pwa-banner p{margin:4px 0 0;color:#b4c9dc;font-size:12px}
+.pwa-banner .section-tag{margin:0 0 5px;color:#b6d9ff}
+@media(max-width:560px){.pwa-banner{flex-wrap:wrap;padding:16px}.pwa-banner .btn{width:100%}}
 </style>
+<link rel="manifest" href="./manifest.webmanifest"/>
+<link rel="apple-touch-icon" href="./pwa-icon-192.png"/>
 </head>
 <body>
 <a class="skip" href="#main" data-en="Skip to main content" data-sr="Pređi na glavni sadržaj">Skip to main content</a>
@@ -178,6 +187,7 @@ footer{background:linear-gradient(180deg,transparent,#0c142b 60%)}
 </div>
 </header>
 <main id="main">
+<section class="wrap pwa-banner" aria-label="ELMD WORLD application"><div><div class="section-tag" data-en="NEW · ELMD WORLD APP" data-sr="NOVO · ELMD WORLD APLIKACIJA">NEW · ELMD WORLD APP</div><strong data-en="Our creative universe — now in an app." data-sr="Naš kreativni svet — sada kao aplikacija.">Our creative universe — now in an app.</strong><p data-en="Open the mobile-friendly version and add it to your home screen." data-sr="Otvori verziju za telefon i dodaj je na početni ekran.">Open the mobile-friendly version and add it to your home screen.</p></div><a class="btn primary" href="./app.html" data-en="Open the app →" data-sr="Otvori aplikaciju →">Open the app →</a></section>
 <figure class="wide-cover wrap">
 <img alt="ELMD WORLD fantasy universe featuring colorful learning animals, moonlight guardian wolves, books, original art and creative products" data-en-alt="ELMD WORLD fantasy universe featuring colorful learning animals, moonlight guardian wolves, books, original art and creative products" data-sr-alt="Fantastični svet ELMD WORLD: životinje za učenje, vukovi čuvari mesečine, knjige, umetnost i kreativni proizvodi" fetchpriority="high" height="941" src="cfa8d62f-1c7b-4e05-979c-d8eb7b715c96.png" width="1672"/>
 <figcaption data-en="Our projects, one magical universe" data-sr="Naši projekti, jedan čarobni univerzum">Our projects, one magical universe</figcaption>
@@ -326,5 +336,6 @@ footer{background:linear-gradient(180deg,transparent,#0c142b 60%)}
     $('reveal').addEventListener('click',()=>{const next=(lastMessage+1)%messages.length;lastMessage=next;$('fortune').textContent=messages[next][lang==='en'?0:1]});
     $('year').textContent=new Date().getFullYear();applyLang();
   </script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('./sw.js').catch(function(){})})}</script>
 </body>
 </html>
